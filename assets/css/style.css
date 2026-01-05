@@ -677,21 +677,82 @@ h2 {
   list-style: none
 }
 
-/* Hero Modernisé */
+/* Hero Modernisé - Version Aviation/IoT */
 .hero-block {
-  padding: 6rem 1rem;
+  padding: 8rem 1rem 6rem;
+  /* Plus d'espace */
   text-align: center;
-  /* background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg) 100%); OLD */
   background:
-    linear-gradient(to bottom, rgba(10, 15, 30, 0.85), rgba(10, 15, 30, 0.95)),
-    url('../hero-bg.png');
+    linear-gradient(to bottom, rgba(0, 20, 40, 0.6), rgba(0, 10, 20, 0.9)),
+    url('../hero-bg-plane.png');
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-attachment: fixed;
-  /* Parallaxe feel */
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
+  color: #fff;
+  /* Ensure text is white on dark background */
+}
+
+.profile-photo-container {
+  margin-bottom: 2rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(0, 100, 255, 0.3);
+}
+
+.hero-title-huge {
+  font-size: clamp(3rem, 8vw, 6rem);
+  /* HUGE responsiveness */
+  font-weight: 900;
+  margin: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  background: linear-gradient(to right, #ffffff, #a5c9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #dbeafe;
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.lead {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #e0f2fe;
+}
+
+/* Animation flottante pour la photo */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .pill {
