@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projets – Hamari Anir</title>
-  <meta name="description" content="Projets de Hamari Anir : stage full stack (Django/React/PostgreSQL), IoT, robotique, réseaux et automatismes.">
+  <meta name="description"
+    content="Projets de Hamari Anir : stage full stack (Django/React/PostgreSQL), IoT, robotique, réseaux et automatismes.">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="assets/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
   <meta property="og:title" content="Projets – Hamari Anir">
-  <meta property="og:description" content="Stage full stack (Django/React/PostgreSQL), IoT, robotique, réseaux et automatismes.">
+  <meta property="og:description"
+    content="Stage full stack (Django/React/PostgreSQL), IoT, robotique, réseaux et automatismes.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/preview-projects.png">
 </head>
+
 <body data-theme="system">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
@@ -23,7 +27,8 @@
         <span class="brand-text">Hamari&nbsp;Anir</span>
       </a>
       <nav class="primary-nav" aria-label="Navigation principale">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">☰ <span class="sr-only">Ouvrir le menu</span></button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">☰ <span class="sr-only">Ouvrir
+            le menu</span></button>
         <ul id="menu-principal">
           <li><a href="index.html">🏠 Accueil</a></li>
           <li><a href="about.html">👤 À propos</a></li>
@@ -37,113 +42,199 @@
 
   <main id="contenu" tabindex="-1">
     <section id="projects" class="container" aria-labelledby="titre-projets">
-      <h1 id="titre-projets" class="section-title">🚀 Mes Projets</h1>
-      <p class="intro-text">Sélection de projets réalisés en BUT GEII et en stage (full stack, IoT, robotique, réseaux, automatismes).</p>
+      <h1 id="titre-projets" class="section-title">🚀 Réalisations Techniques</h1>
+      <p class="intro-text">
+        Une sélection de projets illustrant ma polyvalence en <strong>développement logiciel</strong>,
+        <strong>systèmes embarqués</strong> et <strong>automatisme industriel</strong>.
+      </p>
 
-      <!-- FILTRES (optionnel) -->
+      <!-- FILTRES -->
       <div class="pill-list" role="group" aria-label="Filtres de projet">
-        <button class="pill btn-ghost" data-filter="all">Tous</button>
-        <button class="pill btn-ghost" data-filter="fullstack">Full&nbsp;stack</button>
-        <button class="pill btn-ghost" data-filter="iot">IoT</button>
-        <button class="pill btn-ghost" data-filter="robotique">Robotique</button>
-        <button class="pill btn-ghost" data-filter="reseaux">Réseaux</button>
-        <button class="pill btn-ghost" data-filter="automatisme">Automatisme</button>
+        <button class="pill btn-ghost active" data-filter="all">Tout voir</button>
+        <button class="pill btn-ghost" data-filter="fullstack">Web / App</button>
+        <button class="pill btn-ghost" data-filter="iot">IoT / Embarqué</button>
+        <button class="pill btn-ghost" data-filter="automatisme">Indus / Auto</button>
+        <button class="pill btn-ghost" data-filter="algo">Algo / Math</button>
       </div>
 
-      <!-- STAGE FULL STACK -->
+      <!-- 1. STAGE FULL STACK -->
       <article class="project animate" data-tags="fullstack">
-        <h2>🧩 Stage Full Stack — Altair Parents (Django&nbsp;/&nbsp;React&nbsp;/&nbsp;PostgreSQL)</h2>
-       
-        <p>
-          Développement d’une <strong>API sécurisée</strong> avec Django REST Framework (CRUD Parents/Enfants/Fiches/Messages),
-          <strong>authentification JWT</strong> et gestion des <strong>rôles</strong> (parents, administrateur).
-          <br>Migration <strong>Firebase → PostgreSQL</strong> (schéma relationnel, intégrité, performances), messagerie parents-support,
-          et interface <strong>React</strong> (login, fiches filtrées par niveau, état et redirections).
-        </p>
-        <ul>
-          <li>Back-end : Django + DRF, permissions, pagination, gestion d’erreurs</li>
-          <li>Base de données : PostgreSQL (modèles relationnels, clés étrangères)</li>
-          <li>Front-end : React (auth JWT, dashboard, affichage dynamique)</li>
-          <li>Outils : GitHub, Postman, pgAdmin, VS&nbsp;Code</li>
-        </ul>
-        <p class="cta-row">
-          <a class="btn btn-primary" href="rpt.pdf" target="_blank" rel="noopener" download>📄 Rapport de stage (PDF)</a>
-          <a class="btn btn-outline" href="contact.html">✉️ Me contacter</a>
-        </p>
+        <div class="project-header">
+          <h2>🧩 Plateforme de Gestion Scolaire (Stage Altair)</h2>
+          <span class="badge">Full Stack</span>
+        </div>
+        <p class="project-summary">Refonte complète d'une application de suivi parents-élèves.</p>
+
+        <div class="project-details">
+          <div class="detail-block">
+            <strong>🎯 Objectif</strong>
+            <p>Migrer une architecture legacy vers une stack moderne et sécurisée pour 500+ utilisateurs.</p>
+          </div>
+          <div class="detail-block">
+            <strong>🛠️ Stack Technique</strong>
+            <p>Django REST, React.js, PostgreSQL, JWT, Docker</p>
+          </div>
+          <div class="detail-block">
+            <strong>✅ Résultats</strong>
+            <ul>
+              <li>Migration réussie de Firebase SQL vers PostgreSQL.</li>
+              <li>Temps de réponse API réduit de 40%.</li>
+              <li>Interface parents/admin unifiée.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="rpt.pdf" target="_blank" rel="noopener" download>📄 Rapport (PDF)</a>
+        </div>
       </article>
 
-      <!-- Projet 1 -->
-      <article class="project animate" data-tags="robotique">
-        <h2>🤖 Robot Moway — Programmation embarquée</h2>
-        <img src="robot-moway.png" alt="Robot Moway" class="project-img" loading="lazy">
-        <p>
-          Robot autonome programmé en <strong>C, Java, VHDL</strong> : logique de navigation, simulation capteurs,
-          et validation sur maquette. Renforcement en <em>logique embarquée</em> et <em>conception système</em>.
-        </p>
-      </article>
-
-      <!-- Projet 2 -->
+      <!-- 2. IOT CAPTEURS -->
       <article class="project animate" data-tags="iot">
-        <h2>🌡️ Multi-capteurs connectés — IoT &amp; MQTT</h2>
-        <img src="iot.png" alt="Capteurs ESP32" class="project-img" loading="lazy">
-        <p>
-          Système domotique <strong>ESP32</strong> (température, humidité, gaz, présence). Données en temps réel via <strong>MQTT</strong>
-          vers <strong>Raspberry Pi</strong>, visualisation <strong>Node-RED</strong>. Électronique + protocoles réseau + cloud local.
-        </p>
+        <div class="project-header">
+          <h2>🌡️ Surveillance Environnementale Connectée</h2>
+          <span class="badge">IoT & Data</span>
+        </div>
+        <img src="iot.png" alt="Système IoT ESP32" class="project-img lightbox" loading="lazy">
+
+        <div class="project-details">
+          <div class="detail-block">
+            <strong>🎯 Le Projet</strong>
+            <p>Conception d'un nœud de capteurs autonome pour le monitoring de salles serveurs.</p>
+          </div>
+          <div class="detail-block">
+            <strong>tech</strong>
+            <p>ESP32 (C++), MQTT, Node-RED, InfluxDB, Grafana, Raspberry Pi</p>
+          </div>
+          <div class="detail-block">
+            <strong>✨ Points clés</strong>
+            <ul>
+              <li>Transmission temps réel via Mosquitto (MQTT).</li>
+              <li>Tableau de bord de supervision (Node-RED).</li>
+              <li>Alerte automatique sur seuil critique.</li>
+            </ul>
+          </div>
+        </div>
       </article>
 
-      <!-- Projet 3 -->
-      <article class="project animate" data-tags="robotique">
-        <h2>🧭 Robot Pololu — Suiveur de ligne</h2>
-        <img src="polulu.png" alt="Robot Pololu" class="project-img" loading="lazy">
-        <p>
-          Suiveur de ligne à capteurs infrarouges, <strong>PWM</strong> (ISIS), microcontrôleur <strong>PIC</strong>, gestion d’obstacles,
-          calibration capteurs et CAO de la carte en équipe.
-        </p>
+      <!-- 3. PORTE DE GARAGE (AUTOMATISME) -->
+      <article class="project animate" data-tags="automatisme">
+        <div class="project-header">
+          <h2>🚪 Contrôle d'Accès Industriel</h2>
+          <span class="badge">Automatisme</span>
+        </div>
+        <p class="project-summary">Système automatisé de gestion d'ouverture sécurisée.</p>
+
+        <div class="project-details">
+          <div class="detail-block">
+            <strong>⚙️ Conception</strong>
+            <p>Modélisation GRAFCET et programmation Ladder pour cycle ouverture/fermeture avec sécurité.</p>
+          </div>
+          <div class="detail-block">
+            <strong>tech</strong>
+            <p>TIA Portal (Siemens), Unity Pro (Schneider), Capteurs indu/optiques</p>
+          </div>
+        </div>
       </article>
 
-      <!-- Projet 4 -->
-      <article class="project animate" data-tags="reseaux">
-        <h2>🌐 Réseaux &amp; Simulation — Cisco Packet Tracer</h2>
-        <img src="reseaux.png" alt="Projet réseaux sous Cisco Packet Tracer" class="project-img" loading="lazy">
-        <p>
-          VLAN, routage IP, supervision, configuration d’équipements sous <strong>Packet Tracer</strong>. Compréhension des couches réseau et mise en pratique des protocoles.
-        </p>
+      <!-- 4. CARROUSEL (AUTOMATISME) -->
+      <article class="project animate" data-tags="automatisme">
+        <div class="project-header">
+          <h2>⚙️ Chaîne de Tri Automatisée</h2>
+          <span class="badge">Supervision</span>
+        </div>
+        <p class="project-summary">Pilotage d'un système de tri de pièces par matière et couleur.</p>
+        <div class="project-details">
+          <div class="detail-block">
+            <strong>tech</strong>
+            <p>API Siemens S7-1200, IHM KTP700, Vérins pneumatiques</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-outline" href="hamari_Technique_Carrousel.pdf" target="_blank" rel="noopener" download>📄
+              Dossier Tech</a>
+          </div>
+        </div>
       </article>
 
-      <!-- Projet 5 -->
-      <article class="project animate no-image" data-tags="gestion">
-        <h2>📋 Gestion de projet — Organisation &amp; Suivi</h2>
-        <p>
-          Projet d’équipe : <strong>Gantt</strong>, définition des fonctions, planification, répartition, tests et retours terrain.
-        </p>
-        <p class="cta-row">
-          <a class="btn btn-outline" href="Crsae.pdf" target="_blank" rel="noopener" download>📄 Compte rendu (PDF)</a>
-        </p>
+      <!-- 5. ROBOT MOWAY -->
+      <article class="project animate" data-tags="iot">
+        <div class="project-header">
+          <h2>🤖 Robot Mobile Autonome</h2>
+          <span class="badge">Embarqué</span>
+        </div>
+        <img src="robot-moway.png" alt="Robot Moway" class="project-img lightbox" loading="lazy">
+        <div class="project-details">
+          <p>Programmation C/Java pour navigation avec évitement d'obstacles et suivi de balises.</p>
+        </div>
       </article>
 
-      <!-- Projet 6 -->
-      <article class="project animate no-image" data-tags="automatisme">
-        <h2>⚙️ Carrousel automatisé — Tri de pièces</h2>
-        <p>
-          Système de tri avec vérins, capteurs et bras manipulateur. Pilotage via <strong>API Siemens</strong> et <strong>IHM</strong> dédiée.
-          Approfondissement en <em>logique de contrôle</em>, capteurs industriels et supervision.
-        </p>
-        <p class="cta-row">
-          <a class="btn btn-outline" href="hamari_Technique_Carrousel.pdf" target="_blank" rel="noopener" download>
-            📄 Compte rendu technique (PDF)
-          </a>
-        </p>
+      <!-- 6. MATLAB IMAGE (NEW) -->
+      <article class="project animate" data-tags="algo">
+        <div class="project-header">
+          <h2>📷 Traitement d'Images Numériques</h2>
+          <span class="badge">Algorithmique</span>
+        </div>
+        <div class="project-details">
+          <div class="detail-block">
+            <strong>🎯 Objectif</strong>
+            <p>Développement d'une chaîne de traitement pour l'amélioration et l'analyse d'images.</p>
+          </div>
+          <div class="detail-block">
+            <strong>tech</strong>
+            <p>MATLAB, Algèbre linéaire, Filtres de convolution</p>
+          </div>
+          <div class="detail-block">
+            <strong>Fonctions</strong>
+            <ul>
+              <li>Détection de contours (Sobel/Canny).</li>
+              <li>Réduction de bruit et rehaussement de contraste.</li>
+            </ul>
+          </div>
+        </div>
       </article>
 
-      <!-- Projet 7 (New) -->
-      <article class="project animate no-image" data-tags="automatisme">
-        <h2>🚪 Porte de garage automatisée — IUT de l’Aisne</h2>
-        <p>
-          Conception d’un système de porte automatisée avec <strong>TIA Portal</strong> et <strong>Unity Pro</strong>.
-          Utilisation de capteurs et de systèmes de commande logique pour un fonctionnement sécurisé et optimisé.
-        </p>
+      <!-- 7. VB.NET TOOLS (NEW) -->
+      <article class="project animate" data-tags="algo">
+        <div class="project-header">
+          <h2>🧮 Suite d'Outils Mathématiques</h2>
+          <span class="badge">Software</span>
+        </div>
+        <div class="project-details">
+          <div class="detail-block">
+            <strong>💻 Réalisation</strong>
+            <p>Développement d'applications Desktop pour le calcul scientifique.</p>
+          </div>
+          <div class="detail-block">
+            <strong>tech</strong>
+            <p>VB.NET, Windows Forms, POO</p>
+          </div>
+          <div class="detail-block">
+            <strong>Modules</strong>
+            <ul>
+              <li>Calculatrice matricielle avancée.</li>
+              <li>Outils de conversion logique.</li>
+            </ul>
+          </div>
+        </div>
       </article>
+
+      <!-- 8. ENT PRONOTE (NEW) -->
+      <article class="project animate" data-tags="fullstack">
+        <div class="project-header">
+          <h2>🎓 App Gestion de Vie Scolaire (WIP)</h2>
+          <span class="badge">Dev Web</span>
+        </div>
+        <div class="project-details">
+          <div class="detail-block">
+            <strong>🚧 En cours</strong>
+            <p>Création d'un clone fonctionnel d'ENT type "Pronote".</p>
+          </div>
+          <div class="detail-block">
+            <strong>Features</strong>
+            <p>Gestion des emplois du temps, notes, et absences avec rôles (Prof/Élève).</p>
+          </div>
+        </div>
+      </article>
+
     </section>
   </main>
 
@@ -177,4 +268,5 @@
 
   <script src="assets/js/main.js" defer></script>
 </body>
+
 </html>
