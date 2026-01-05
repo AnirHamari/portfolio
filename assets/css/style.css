@@ -1102,3 +1102,154 @@ img {
 blockquote {
   margin: 0
 }
+
+/* --- Terminal Badge (New) --- */
+.terminal-badge {
+  display: inline-block;
+  background: rgba(10, 15, 23, 0.85);
+  /* Darker, more terminal-like */
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.terminal-prompt {
+  color: #27c93f;
+  /* Green prompt */
+  margin-right: 0.5rem;
+  font-weight: 700;
+}
+
+.typing-text {
+  color: #e0e0e0;
+  border-right: 2px solid var(--accent);
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 0;
+  animation:
+    typing 3.5s steps(30, end) forwards,
+    blinkCursor 0.8s step-end infinite;
+  animation-delay: 1s;
+  /* Wait a bit before typing */
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blinkCursor {
+  0% {
+    border-right-color: var(--accent);
+  }
+
+  50% {
+    border-right-color: transparent;
+  }
+
+  100% {
+    border-right-color: var(--accent);
+  }
+}
+
+.highlight-text {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* --- Identity Cards (Refined) --- */
+.identity-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.identity-card {
+  background: rgba(15, 27, 43, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 160px;
+}
+
+.identity-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(30, 214, 255, 0.15);
+}
+
+.id-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.identity-card span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e0f2fe;
+  letter-spacing: 0.5px;
+}
+
+/* --- Tech Ticker (Bonus) --- */
+.tech-ticker {
+  margin-top: 4rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.ticker-track {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  animation: scrollTicker 20s linear infinite;
+}
+
+.ticker-item {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
