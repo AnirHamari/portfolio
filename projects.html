@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projets Professionnels | Hamari Anir</title>
+  <title>Projets | Hamari Anir</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,37 +19,36 @@
     <div class="container header-bar">
       <a class="brand" href="index.html" aria-label="Accueil Hamari Anir">
         <span class="brand-icon">✈️</span>
-        <span class="brand-text">HAMARI<span class="brand-accent">.DEV</span></span>
+        <span class="brand-text">HAMARI <span class="brand-accent">ANIR</span></span>
       </a>
-      <!-- Nav Removed -->
       <button id="dark-mode-toggle" class="btn btn-ghost" aria-label="Mode sombre">🌙</button>
     </div>
   </header>
 
   <main id="contenu" tabindex="-1">
-    <section id="projects" class="container" aria-labelledby="titre-projets">
 
-      <div class="projects-intro animate">
-        <h1 id="titre-projets" class="section-title">Projets <span class="accent">Professionnels</span></h1>
-        <p class="lead">Sélection de réalisations techniques majeures en entreprise et recherche.</p>
-
-        <div class="project-switch">
-          <a href="#" class="switch-btn active">Projets Pro</a>
-          <a href="personal-projects.html" class="switch-btn">Projets Perso/Lab</a>
-        </div>
+    <!-- New Tech Hero Section -->
+    <section class="projects-hero animate">
+      <div class="container">
+        <h1 id="titre-projets" class="section-title">Portfolio <span class="accent">Technique</span></h1>
+        <p class="lead">Exploration complète : Projets industriels, développements web et recherche personnelle.</p>
       </div>
+    </section>
+
+    <section id="projects" class="container" aria-labelledby="titre-projets">
 
       <!-- Filters -->
       <div class="filter-bar animate">
         <button class="filter-btn active" data-filter="all">Tous</button>
-        <button class="filter-btn" data-filter="fullstack">Web / App</button>
-        <button class="filter-btn" data-filter="iot">IoT / Embarqué</button>
-        <button class="filter-btn" data-filter="automatisme">Indus / Auto</button>
+        <button class="filter-btn" data-filter="automatisme">Industrie & Auto</button>
+        <button class="filter-btn" data-filter="iot">IoT & Embarqué</button>
+        <button class="filter-btn" data-filter="fullstack">Web & Soft</button>
+        <button class="filter-btn" data-filter="algo">Perso & Lab</button>
       </div>
 
       <div class="projects-grid">
 
-        <!-- 1. STAGE FULL STACK -->
+        <!-- 1. STAGE FULL STACK (PRO) -->
         <article class="project animate" data-tags="fullstack">
           <div class="project-header">
             <h2>🧩 Plateforme de Gestion Scolaire (Stage Altair)</h2>
@@ -65,20 +64,13 @@
               <strong>🛠️ Stack Technique</strong>
               <p>Django REST, React.js, PostgreSQL, JWT, Docker</p>
             </div>
-            <div class="detail-block">
-              <strong>✅ Résultats</strong>
-              <ul>
-                <li>Migration réussie de Firebase SQL vers PostgreSQL.</li>
-                <li>Temps de réponse API réduit de 40%.</li>
-              </ul>
-            </div>
           </div>
           <div class="cta-row">
             <a class="btn btn-primary" href="rpt.pdf" target="_blank" rel="noopener" download>📄 Rapport (PDF)</a>
           </div>
         </article>
 
-        <!-- 2. IOT CAPTEURS -->
+        <!-- 2. IOT CAPTEURS (PRO) -->
         <article class="project animate" data-tags="iot">
           <div class="project-header">
             <h2>🌡️ Surveillance Environnementale Connectée</h2>
@@ -91,35 +83,25 @@
               <strong>tech</strong>
               <p>ESP32 (C++), MQTT, Node-RED, InfluxDB, Grafana, Raspberry Pi</p>
             </div>
-            <div class="detail-block">
-              <strong>✨ Points clés</strong>
-              <ul>
-                <li>Transmission temps réel via MQTT.</li>
-                <li>Tableau de bord Grafana/Node-RED.</li>
-              </ul>
-            </div>
           </div>
         </article>
 
-        <!-- 3. PORTE DE GARAGE -->
+        <!-- 3. PORTE DE GARAGE (PRO) -->
         <article class="project animate" data-tags="automatisme">
           <div class="project-header">
             <h2>🚪 Contrôle d'Accès Industriel</h2>
             <span class="badge">Automatisme</span>
           </div>
+          <p class="project-summary">Système automatisé de gestion d'ouverture sécurisée.</p>
           <div class="project-details">
             <div class="detail-block">
-              <strong>⚙️ Conception</strong>
-              <p>Modélisation GRAFCET et programmation Ladder pour cycle avec sécurité.</p>
-            </div>
-            <div class="detail-block">
               <strong>tech</strong>
-              <p>TIA Portal (Siemens), Unity Pro (Schneider)</p>
+              <p>TIA Portal (Siemens), Unity Pro (Schneider), GRAFCET</p>
             </div>
           </div>
         </article>
 
-        <!-- 4. CARROUSEL -->
+        <!-- 4. CARROUSEL (PRO) -->
         <article class="project animate" data-tags="automatisme">
           <div class="project-header">
             <h2>⚙️ Chaîne de Tri Automatisée</h2>
@@ -138,7 +120,9 @@
           </div>
         </article>
 
-        <!-- 5. ENT PRONOTE -->
+        <!-- PERSO PROJECTS MERGED HERE -->
+
+        <!-- 5. ENT PRONOTE (PERSO/WIP) -->
         <article class="project animate" data-tags="fullstack">
           <div class="project-header">
             <h2>🎓 App Gestion de Vie Scolaire (WIP)</h2>
@@ -147,8 +131,53 @@
           <img src="ent-project.png" alt="Dashboard type Pronote" class="project-img lightbox" loading="lazy">
           <div class="project-details">
             <div class="detail-block">
-              <strong>🚧 En cours</strong>
+              <strong>🚧 Side Project</strong>
               <p>Création d'un clone fonctionnel d'ENT type "Pronote".</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. ROBOT MOWAY (ACADEMIC) -->
+        <article class="project animate" data-tags="iot">
+          <div class="project-header">
+            <h2>🤖 Robot Mobile Autonome</h2>
+            <span class="badge">Embarqué</span>
+          </div>
+          <img src="robot-moway.png" alt="Robot Moway" class="project-img lightbox" loading="lazy">
+          <div class="project-details">
+            <div class="detail-block">
+              <strong>Challenge</strong>
+              <p>Programmation C/Java pour navigation avec évitement d'obstacles.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. MATLAB IMAGE (LAB) -->
+        <article class="project animate" data-tags="algo">
+          <div class="project-header">
+            <h2>📷 Traitement d'Images Numériques</h2>
+            <span class="badge">Algorithmique</span>
+          </div>
+          <img src="matlab-project.png" alt="Interface MATLAB" class="project-img lightbox" loading="lazy">
+          <div class="project-details">
+            <div class="detail-block">
+              <strong>tech</strong>
+              <p>MATLAB, Sobel/Canny Filter, Algèbre linéaire</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. VB.NET TOOLS (LAB) -->
+        <article class="project animate" data-tags="algo">
+          <div class="project-header">
+            <h2>🧮 Suite d'Outils Mathématiques</h2>
+            <span class="badge">Software</span>
+          </div>
+          <img src="vbnet-project.png" alt="Outils VB.NET" class="project-img lightbox" loading="lazy">
+          <div class="project-details">
+            <div class="detail-block">
+              <strong>tech</strong>
+              <p>VB.NET, Windows Forms, POO</p>
             </div>
           </div>
         </article>

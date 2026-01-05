@@ -896,6 +896,21 @@ h2 {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* --- Projects Hero (Tech Grid) --- */
+.projects-hero {
+  padding: 8rem 1rem 4rem;
+  text-align: center;
+  background-color: #0a1428;
+  background-image:
+    linear-gradient(rgba(10, 20, 40, 0.9), rgba(10, 20, 40, 0.95)),
+    repeating-linear-gradient(transparent, transparent 50px, rgba(0, 212, 255, 0.05) 50px, rgba(0, 212, 255, 0.05) 51px),
+    repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(0, 212, 255, 0.05) 50px, rgba(0, 212, 255, 0.05) 51px);
+  background-size: cover;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
 /* --- Identity Cards (Hero) --- */
 .identity-row {
   display: flex;
