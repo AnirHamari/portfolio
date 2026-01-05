@@ -1,294 +1,186 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>À propos de Hamari Anir</title>
-  <meta name="description"
-    content="Étudiant en BUT GEII, passionné par l'informatique, les réseaux, l'automatisme et l'innovation technologique. Découvrez mon parcours, mes compétences et mes projets." />
-  <meta name="color-scheme" content="light dark" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- SEO (à ajuster avec votre domaine) -->
-  <link rel="canonical" href="https://www.votredomaine.fr/about.html" />
-  <meta name="robots" content="index,follow" />
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="profile" />
-  <meta property="og:title" content="À propos de Hamari Anir" />
-  <meta property="og:description" content="Étudiant en BUT GEII – parcours, expériences, compétences et objectifs." />
-  <meta property="og:url" content="https://www.votredomaine.fr/about.html" />
-  <meta property="og:image" content="/assets/img/preview.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="À propos de Hamari Anir" />
-  <meta name="twitter:description" content="Étudiant en BUT GEII – parcours, expériences, compétences et objectifs." />
-  <meta name="twitter:image" content="/assets/img/preview.jpg" />
-  <!-- Favicon (optionnel) -->
-  <link rel="icon" href="/assets/favicon.ico" />
-  <style>
-    /* Styles minimes pour accessibilité si CSS principal absent */
-    :root {
-      scroll-behavior: smooth
-    }
+  <meta charset="UTF-8">
+  <meta name="description" content="Profil de Hamari Anir - Expert IoT & Systèmes Embarqués">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compétences | Hamari Anir</title>
 
-    .visually-hidden {
-      position: absolute !important;
-      clip: rect(1px, 1px, 1px, 1px);
-      padding: 0;
-      border: 0;
-      height: 1px;
-      width: 1px;
-      overflow: hidden
-    }
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
 
-    .btn {
-      display: inline-block;
-      padding: .6rem 1rem;
-      border-radius: .75rem;
-      text-decoration: none;
-      border: 1px solid currentColor
-    }
-
-    .btn-download {
-      display: inline-block;
-      margin: .25rem 0
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap
-    }
-
-    header,
-    footer {
-      border-block: 1px solid rgba(0, 0, 0, .1);
-      padding: .75rem 1rem
-    }
-
-    main {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 1rem
-    }
-
-    .section-title {
-      margin-top: 0
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <a class="visually-hidden" href="#contenu">Aller au contenu</a>
-  <header id="header">
-    <nav aria-label="Navigation principale" role="navigation">
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="about.html" aria-current="page">À propos</a></li>
-        <li><a href="projects.html">Projets</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+
+  <header class="site-header" role="banner">
+    <div class="container header-bar">
+      <a class="brand" href="index.html" aria-label="Accueil Hamari Anir">
+        <span class="brand-icon">✈️</span>
+        <span class="brand-text">HAMARI<span class="brand-accent">.DEV</span></span>
+      </a>
+      <!-- Nav Removed -->
+      <button id="dark-mode-toggle" class="btn btn-ghost" aria-label="Mode sombre">🌙</button>
+    </div>
   </header>
 
-  <main id="contenu">
-    <nav aria-label="Fil d'Ariane" class="breadcrumb" style="margin:1rem 0;">
-      <ol style="display:flex;gap:.5rem;list-style:none;padding:0;margin:0;flex-wrap:wrap">
-        <li><a href="index.html">Accueil</a></li>
-        <li aria-hidden="true">›</li>
-        <li><span aria-current="page">À propos</span></li>
-      </ol>
-    </nav>
+  <main id="contenu" tabindex="-1">
 
-    <section id="about" class="animate">
-      <h1 class="section-title">👤 À propos de moi</h1>
-      <p class="intro-text">
-        Étudiant en 3ᵉ année de <strong>BUT GEII</strong> (IUT de Soissons), je combine une double compétence en
-        <strong>Génie Électrique</strong> et <strong>Informatique Industrielle</strong>.
-        <br><br>
-        Mon parcours est guidé par une approche pragmatique : comprendre les contraintes matérielles pour mieux les
-        piloter par le logiciel.
-        Que ce soit sur un automate Siemens, un microcontrôleur ESP32 ou une API Django, je cherche à créer des systèmes
-        <strong>robustes</strong>, <strong>communicants</strong> et <strong>utiles</strong>.
-      </p>
+    <!-- Section Intro "Synthetic" -->
+    <section class="about-hero animate">
+      <div class="container about-grid">
 
-      <h2>🧭 Parcours & Expériences</h2>
-      <div class="timeline">
+        <div class="about-text">
+          <h1 class="section-title">Pilote de Vos <span class="accent">Projets Techniques</span></h1>
+          <p class="lead-text">
+            <strong>21 ans. Futur Ingénieur. Passionné d'Aviation & IoT.</strong><br>
+            Je conçois des systèmes embarqués robustes et des interfaces web performantes.
+            Mon objectif : l'innovation technologique au service de l'industrie.
+          </p>
 
-        <!-- Item 1 -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <span class="date">En cours (2023 - 2026)</span>
-            <h3>BUT GEII — IUT de Soissons</h3>
-            <h4>Génie Électrique & Informatique Industrielle</h4>
-            <p>Formation intensive en automatisme, électronique et informatique bas niveau. Projets concrets et travail
-              en équipe.</p>
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Années d'études</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Projets Réalisés</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Engagé</span>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a href="cvanir.pdf.pdf" class="btn btn-primary" target="_blank" rel="noopener" download>📄 CV (PDF)</a>
+            <a href="ltmotiv.pdf" class="btn btn-outline" target="_blank" rel="noopener" download>📝 Lettre (PDF)</a>
           </div>
         </div>
 
-        <!-- Item 2 -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <span class="date">2024 (Alternance)</span>
-            <h3>Technicien de Maintenance — U Logistique</h3>
-            <h4>Alternance (Nanteuil le Haudoin)</h4>
-            <p>Maintenance préventive et corrective sur systèmes automatisés de tri. Dépannage capteurs, moteurs, et
-              supervision.</p>
+        <!-- Skills Visuels -->
+        <div class="skills-visual">
+          <div class="skill-category">
+            <h3>💻 Développement</h3>
+            <div class="skill-tags">
+              <span class="pill">C++</span>
+              <span class="pill">Python</span>
+              <span class="pill">React</span>
+              <span class="pill">Django</span>
+              <span class="pill">Git</span>
+            </div>
           </div>
-        </div>
 
-        <!-- Item 3 -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <span class="date">2024 (Stage)</span>
-            <h3>Développeur Full Stack — Altair Group</h3>
-            <h4>Stage application web (Crépy-en-Valois)</h4>
-            <p>Conception et développement d'une plateforme de gestion scolaire (Django/React). Mise en production et
-              documentation.</p>
+          <div class="skill-category">
+            <h3>⚙️ Automatisme</h3>
+            <div class="skill-tags">
+              <span class="pill">Siemens (TIA)</span>
+              <span class="pill">Schneider</span>
+              <span class="pill">Grafcet</span>
+              <span class="pill">Supervision</span>
+            </div>
           </div>
-        </div>
 
-        <!-- Item 4 -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <span class="date">2022 - 2023</span>
-            <h3>Service Civique — Club Sportif</h3>
-            <h4>Engagement bénévole</h4>
-            <p>Encadrement de jeunes, organisation logistique de tournois et communication digitale.</p>
+          <div class="skill-category">
+            <h3>💡 Systèmes Embarqués</h3>
+            <div class="skill-tags">
+              <span class="pill">Raspberry Pi</span>
+              <span class="pill">ESP32</span>
+              <span class="pill">MQTT</span>
+              <span class="pill">VHDL</span>
+              <span class="pill">IoT</span>
+            </div>
           </div>
         </div>
 
       </div>
-
-      <h2>🎯 Objectif professionnel</h2>
-      <p>🔍 À la recherche d’un <strong>stage de trois mois à partir de mars 2026</strong> dans les domaines de
-        l'informatique industrielle, de l'automatisme ou des systèmes embarqués.</p>
-
-      <h2>🛠️ Pôles de Compétences</h2>
-      <div class="project-details" style="border:none; margin-top:0;">
-
-        <div class="detail-block">
-          <strong>💻 Développement Logiciel & Web</strong>
-          <p>
-            Conception d'architectures complètes (Full Stack) et développement d'outils métiers.
-          </p>
-          <ul>
-            <li><strong>Langages :</strong> Python, C++, Java, JavaScript (React), SQL, VB.NET</li>
-            <li><strong>Web & Data :</strong> Django REST, PostgreSQL, Docker, Git</li>
-          </ul>
-        </div>
-
-        <div class="detail-block">
-          <strong>⚙️ Automatisme & Supervisions</strong>
-          <p>
-            Pilotage de systèmes industriels et interfaces homme-machine.
-          </p>
-          <ul>
-            <li><strong>Automates :</strong> TIA Portal (Siemens), Unity Pro / Control Expert (Schneider)</li>
-            <li><strong>SCADA / IHM :</strong> PcVue, Xrelais, Ecrans Siemens KTP</li>
-          </ul>
-        </div>
-
-        <div class="detail-block">
-          <strong>💡 Systèmes Embarqués & IoT</strong>
-          <p>
-            Acquisition de données et communication machine-to-machine.
-          </p>
-          <ul>
-            <li><strong>Hardware :</strong> ESP32, Arduino, Raspberry Pi, PIC</li>
-            <li><strong>Protocoles & Outils :</strong> MQTT, Node-RED, InfluxDB, Modbus, I2C/SPI</li>
-          </ul>
-        </div>
-
-        <div class="detail-block">
-          <strong>🌍 Langues & Transverses</strong>
-          <ul>
-            <li>Anglais technique (B2), Espagnol (B2)</li>
-            <li>Gestion de projet, Méthode Agile (Gantt, Trello)</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <h2>✅ Qualités humaines</h2>
-      <ul>
-        <li>💪 Curieux, rigoureux, motivé par l’apprentissage</li>
-        <li>🧠 Esprit d’analyse et résolution de problèmes techniques</li>
-        <li>👥 Leadership et sens du travail en équipe</li>
-        <li>⏱️ Ponctuel, organisé, persévérant</li>
-      </ul>
-
-      <h2>📄 Mes documents</h2>
-      <p>Vous pouvez consulter et télécharger mes documents :</p>
-      <p>
-        <a href="cvanir.pdf.pdf" target="_blank" rel="noopener" class="btn btn-download" download>
-          📥 Télécharger mon CV (PDF)
-        </a>
-        <br />
-        <a href="ltmotiv.pdf" target="_blank" rel="noopener" class="btn btn-download" download>
-          📥 Télécharger ma lettre de motivation (PDF)
-        </a>
-      </p>
-
-      <h2>🔗 Me contacter</h2>
-      <p>
-        👉 Retrouvez-moi aussi sur :
-        <br />
-        <a href="https://linkedin.com/in/anir-hamari" target="_blank" rel="noopener" class="btn btn-download"
-          style="margin-top:10px;">
-          🔗 LinkedIn – Anir Hamari
-        </a>
-      </p>
     </section>
+
+    <div class="container">
+      <hr class="divider">
+
+      <!-- Timeline -->
+      <section class="timeline-section animate">
+        <h2>🧭 Parcours Chronologique</h2>
+        <div class="timeline">
+
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="date">En cours (2023 - 2026)</span>
+              <h3>BUT GEII — IUT de Soissons</h3>
+              <h4>Génie Électrique & Informatique Industrielle</h4>
+              <p>Formation intensive : Automatisme, C++, Électronique.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="date">2024 (Alternance)</span>
+              <h3>Technicien de Maintenance — U Logistique</h3>
+              <h4>Automatisme & Maintenance Industrielle</h4>
+              <p>Maintenance préventive sur systèmes de tri automatisés.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="date">2024 (Stage)</span>
+              <h3>Développeur Full Stack — Altair Group</h3>
+              <h4>Web & Base de Données</h4>
+              <p>Mise en production d'une plateforme scolaire (Django/React).</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
   </main>
 
-  <footer>
-    <nav aria-label="Navigation pied de page">
-      <ul>
-        <li><a href="index.html">🏠 Accueil</a></li>
-        <li><a href="about.html" aria-current="page">👤 À propos</a></li>
-        <li><a href="projects.html">🛠 Projets</a></li>
-        <li><a href="contact.html">✉️ Contact</a></li>
-      </ul>
-    </nav>
-    <p>© <span id="year"></span> Hamari Anir. Tous droits réservés.</p>
-    <button id="dark-mode-toggle" type="button" aria-pressed="false" aria-label="Basculer le mode sombre">🌙 Mode
-      sombre</button>
+  <footer class="site-footer">
+    <div class="container footer-content animate">
+
+      <div class="footer-icons-row">
+        <a href="index.html" class="footer-icon-link" aria-label="Accueil">
+          <span class="icon">🏠</span>
+          <span class="text">Accueil</span>
+        </a>
+        <a href="about.html" class="footer-icon-link active" aria-label="Compétences">
+          <span class="icon">👤</span>
+          <span class="text">À propos</span>
+        </a>
+        <a href="projects.html" class="footer-icon-link" aria-label="Projets">
+          <span class="icon">💼</span>
+          <span class="text">Projets</span>
+        </a>
+        <a href="contact.html" class="footer-icon-link" aria-label="Contact">
+          <span class="icon">✉️</span>
+          <span class="text">Contact</span>
+        </a>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/anir-hamari-775618222" target="_blank" rel="noopener" class="linkedin-btn">
+          🔗 Retrouvez-moi sur LinkedIn
+        </a>
+      </div>
+
+      <p class="copyright">&copy; 2026 Hamari Anir - All Systems Operational.</p>
+    </div>
   </footer>
 
-  <script>
-    // Année automatique dans le footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Basculer le mode sombre avec préférence persistante
-    (function () {
-      const btn = document.getElementById('dark-mode-toggle');
-      const STORAGE_KEY = 'prefers-dark';
-      const root = document.documentElement;
-
-      const apply = (on) => {
-        root.dataset.theme = on ? 'dark' : 'light';
-        btn.setAttribute('aria-pressed', String(on));
-      };
-
-      const saved = localStorage.getItem(STORAGE_KEY);
-      const prefers = saved !== null ? saved === 'true' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-      apply(prefers);
-
-      btn.addEventListener('click', () => {
-        const next = !(root.dataset.theme === 'dark');
-        localStorage.setItem(STORAGE_KEY, String(next));
-        apply(next);
-      });
-    })();
-  </script>
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

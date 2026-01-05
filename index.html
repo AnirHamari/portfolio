@@ -32,22 +32,11 @@
   <header class="site-header" role="banner">
     <div class="container header-bar">
       <a class="brand" href="index.html" aria-label="Accueil Hamari Anir">
-        <span class="brand-mark" aria-hidden="true">▲</span>
-        <span class="brand-text">Hamari&nbsp;Anir</span>
+        <span class="brand-icon">✈️</span>
+        <span class="brand-text">HAMARI<span class="brand-accent">.DEV</span></span>
       </a>
-
-      <nav class="primary-nav" aria-label="Navigation principale">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">☰ <span class="sr-only">Ouvrir
-            le menu</span></button>
-        <ul id="menu-principal">
-          <li><a href="index.html" class="active" aria-current="page">🏠 Accueil</a></li>
-          <li><a href="about.html">👤 À propos</a></li>
-          <li><a href="projects.html">💼 Projets</a></li>
-          <li><a href="contact.html">✉️ Contact</a></li>
-        </ul>
-      </nav>
-
-      <button id="dark-mode-toggle" class="btn btn-ghost" aria-pressed="false">🌙 Mode sombre</button>
+      <!-- Nav Removed -->
+      <button id="dark-mode-toggle" class="btn btn-ghost" aria-label="Mode sombre">🌙</button>
     </div>
   </header>
 
@@ -57,8 +46,7 @@
 
         <!-- Photo Profile -->
         <div class="profile-photo-container">
-          <!-- Placeholder pour votre photo -->
-          <img src="assets/photo_placeholder.png" alt="Photo de Hamari Anir" class="profile-photo">
+          <img src="assets/photo_placeholder.png" alt="Hamari Anir" class="profile-photo">
         </div>
 
         <div class="hero-text full-width">
@@ -71,12 +59,22 @@
             <strong>Aéronautique • Systèmes Critiques • Innovation</strong>
           </p>
 
-          <p class="search-status">
-            À la recherche d'un <strong class="accent">stage technique de 3 mois</strong> (Mars 2026).
-            <br><em>Prêt à décoller avec votre équipe.</em>
-          </p>
+          <!-- NEW: Identity Cards Row -->
+          <div class="identity-row">
+            <div class="identity-card animate-delay-1">
+              <div class="id-icon">🛸</div>
+              <span>Drones & Aéro</span>
+            </div>
+            <div class="identity-card animate-delay-2">
+              <div class="id-icon">📡</div>
+              <span>IoT & Réseaux</span>
+            </div>
+            <div class="identity-card animate-delay-3">
+              <div class="id-icon">💻</div>
+              <span>Full Stack</span>
+            </div>
+          </div>
 
-          <!-- CV Link REMOVED as requested -->
         </div>
 
       </div>
@@ -102,21 +100,26 @@
   </main>
 
   <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <nav class="footer-nav" aria-label="Navigation de pied de page">
-        <ul>
-          <li><a href="index.html" class="active">🏠 Accueil</a></li>
-          <li><a href="about.html">👤 À propos</a></li>
-          <li><a href="projects.html">💼 Projets</a></li>
-          <li><a href="contact.html">✉️ Contact</a></li>
-        </ul>
-      </nav>
-
-      <p>
-        🔗 Retrouvez-moi sur
-        <a href="https://linkedin.com/in/anir-hamari" target="_blank" rel="noopener">LinkedIn</a>
-      </p>
-      <p>© 2025 Hamari Anir. Tous droits réservés.</p>
+    <div class="container footer-content animate">
+      <div class="footer-icons-row">
+        <a href="index.html" class="footer-icon-link active" aria-label="Accueil">
+          <span class="icon">🏠</span>
+          <span class="text">Accueil</span>
+        </a>
+        <a href="about.html" class="footer-icon-link" aria-label="Compétences">
+          <span class="icon">👤</span>
+          <span class="text">À propos</span>
+        </a>
+        <a href="projects.html" class="footer-icon-link" aria-label="Projets">
+          <span class="icon">💼</span>
+          <span class="text">Projets</span>
+        </a>
+        <a href="contact.html" class="footer-icon-link" aria-label="Contact">
+          <span class="icon">✉️</span>
+          <span class="text">Contact</span>
+        </a>
+      </div>
+      <p class="copyright">&copy; 2026 Hamari Anir. Tous droits réservés.</p>
     </div>
   </footer>
 
