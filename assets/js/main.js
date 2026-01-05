@@ -1,17 +1,22 @@
 /* ===============================
-   Portfolio Hamari Anir — JS NASA-like
+   Portfolio Hamari Anir — JS Optimized
    =============================== */
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('🚀 Portfolio initialisé');
+  console.log('🚀 Portfolio Initialized (Pro Mode)');
 
   /* ---------------------------------
-   * 0) Helpers & flags
+   * 0) Enforce Dark Mode
+   * --------------------------------- */
+  document.documentElement.setAttribute('data-theme', 'dark');
+  localStorage.setItem('theme', 'dark');
+
+  /* ---------------------------------
+   * 1) Helpers & flags
    * --------------------------------- */
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------------------------------
-   * 1) Animations au scroll (IntersectionObserver)
-   *    -> désactivées si prefers-reduced-motion
+   * 2) Animations au scroll (IntersectionObserver)
    * --------------------------------- */
   if (!prefersReduced && 'IntersectionObserver' in window) {
     const animatedItems = document.querySelectorAll('.animate');
@@ -25,79 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.2 });
     animatedItems.forEach(el => io.observe(el));
   } else {
-    // accessibilité : tout visible immédiatement
     document.querySelectorAll('.animate').forEach(el => el.classList.add('visible'));
   }
 
   /* ---------------------------------
-   * 2) Menu mobile accessible
-   * --------------------------------- */
-  const nav = document.querySelector('.primary-nav');
-  const navToggle = document.querySelector('.nav-toggle');
-  if (nav && navToggle) {
-    navToggle.addEventListener('click', () => {
-      const open = nav.getAttribute('data-open') === 'true';
-      nav.setAttribute('data-open', String(!open));
-      navToggle.setAttribute('aria-expanded', String(!open));
-    });
-
-    // Fermer au clic extérieur / sur lien
-    document.addEventListener('click', (e) => {
-      const clickedInside = e.target.closest('.primary-nav') || e.target.closest('.nav-toggle');
-      if (!clickedInside && nav.getAttribute('data-open') === 'true') {
-        nav.setAttribute('data-open', 'false');
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-    nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        if (nav.getAttribute('data-open') === 'true') {
-          nav.setAttribute('data-open', 'false');
-          navToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-  }
-
-  /* ---------------------------------
-   * 3) Thème : système ↔︎ sombre ↔︎ clair
-   *    - fonctionne avec body.dark ET data-theme
-   * --------------------------------- */
-  const THEME_KEY = 'pref-theme'; // 'system' | 'dark' | 'light'
-  const themeBtn = document.getElementById('dark-mode-toggle');
-
-  function themeLabel(mode) {
-    if (mode === 'dark') return '🌙 Mode dark';
-    if (mode === 'light') return '☀️ Mode light';
-    return '🖥️ Mode system';
-  }
-  function applyTheme(mode) {
-    // compat ancien CSS (body.dark) + nouveau (data-theme)
-    document.body.classList.toggle('dark', mode === 'dark');
-    document.body.setAttribute('data-theme', mode);
-    localStorage.setItem(THEME_KEY, mode);
-    if (themeBtn) {
-      themeBtn.textContent = themeLabel(mode);
-      themeBtn.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
-      themeBtn.title = 'Changer le thème (system → dark → light)';
-    }
-  }
-  function nextTheme(mode) {
-    return mode === 'system' ? 'dark' : mode === 'dark' ? 'light' : 'system';
-  }
-
-  const savedTheme = localStorage.getItem(THEME_KEY) || 'system';
-  applyTheme(savedTheme);
-
-  if (themeBtn) {
-    themeBtn.addEventListener('click', () => {
-      const curr = document.body.getAttribute('data-theme') || 'system';
-      applyTheme(nextTheme(curr));
-    });
-  }
-
-  /* ---------------------------------
-   * 4) Lightbox minimaliste (images .lightbox)
+   * 3) Lightbox minimaliste (images .lightbox)
    * --------------------------------- */
   const lightboxImgs = document.querySelectorAll('img.lightbox, .project-img.lightbox');
   if (lightboxImgs.length) {
@@ -134,21 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------------------------
-   * 5) Formulaire de contact (feedback UX)
+   * 4) Formulaire de contact (feedback UX)
    * --------------------------------- */
   const form = document.querySelector('form');
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      // Tu peux remplacer ce bloc par une vraie intégration (EmailJS, Formspree, backend…)
       alert('📨 Merci pour votre message ! Je vous réponds dès que possible.');
       form.reset();
     });
   }
 
   /* ---------------------------------
-   * 6) Filtres de projets (data-filter / data-tags)
-   *    -> compatibles avec le HTML optimisé des projets
+   * 5) Filtres de projets (data-filter)
    * --------------------------------- */
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-filter]');
@@ -159,22 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const tags = (card.getAttribute('data-tags') || '').split(',').map(s => s.trim());
       card.style.display = (tag === 'all' || tags.includes(tag)) ? '' : 'none';
     });
-    // état visuel actif (optionnel)
     document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
   });
 
-  /* ---------------------------------
-   * 7) Lien d’évitement (skip-link) — focus vers #contenu
-   * --------------------------------- */
-  const skip = document.querySelector('.skip-link');
-  const main = document.querySelector('#contenu');
-  if (skip && main) {
-    skip.addEventListener('click', () => {
-      main.setAttribute('tabindex', '-1');
-      main.focus();
-      // nettoie après focus pour éviter tab stop permanent
-      setTimeout(() => main.removeAttribute('tabindex'), 300);
-    });
-  }
 });
