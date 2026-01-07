@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.appendChild(img);
     document.body.appendChild(overlay);
 
-    function open(src, alt='') {
+    function open(src, alt = '') {
       img.src = src; img.alt = alt || '';
       overlay.style.visibility = 'visible';
       requestAnimationFrame(() => { overlay.style.opacity = '1'; });
@@ -71,15 +71,64 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------------------------
-   * 4) Formulaire de contact (feedback UX)
+   * 4) Formulaire de contact Web3Forms + Toast
    * --------------------------------- */
-  const form = document.querySelector('form');
+  const form = document.getElementById('contact-form');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      alert('📨 Merci pour votre message ! Je vous réponds dès que possible.');
-      form.reset();
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = '⏳ Envoi en cours...';
+      submitBtn.disabled = true;
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          showToast('Message envoyé !', 'Je vous répondrai dans les plus brefs délais.');
+          form.reset();
+        } else {
+          showToast('Erreur d\'envoi', 'Veuillez réessayer ou m\'envoyer un email direct.', 'error');
+        }
+      } catch (error) {
+        console.error('Erreur:', error);
+        showToast('Erreur réseau', 'Veuillez vérifier votre connexion.', 'error');
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
     });
+  }
+
+  // Fonction pour afficher le toast
+  function showToast(title, message, type = 'success') {
+    const toast = document.getElementById('toast-notification');
+    if (!toast) return;
+
+    const icon = toast.querySelector('.toast-icon');
+    const titleEl = toast.querySelector('.toast-text strong');
+    const messageEl = toast.querySelector('.toast-text p');
+
+    icon.textContent = type === 'success' ? '✅' : '⚠️';
+    titleEl.textContent = title;
+    messageEl.textContent = message;
+
+    toast.classList.add('show');
+
+    const closeBtn = toast.querySelector('.toast-close');
+    const close = () => toast.classList.remove('show');
+
+    closeBtn.addEventListener('click', close, { once: true });
+    setTimeout(close, 5000); // Fermeture automatique après 5s
   }
 
   /* ---------------------------------
@@ -97,5 +146,143 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
   });
+
+  /* ---------------------------------
+   * 6) Données et Chargement des projets
+   * --------------------------------- */
+  const PROJECTS_DATA = {
+    "professional": [
+      {
+        "id": "altair-gestion",
+        "title": "Plateforme de Gestion Scolaire",
+        "emoji": "🧩",
+        "badge": "Stage Altair",
+        "tags": ["web"],
+        "summary": "Refonte complète d'une application de suivi parents-élèves (Django/React). Migration d'architecture legacy vers moderne.",
+        "image": "assets/images/projects/altair.jpg",
+        "objective": "Moderniser et sécuriser l'accès aux données scolaires.",
+        "tech": "Django REST, React.js, PostgreSQL, Docker",
+        "links": [
+          {
+            "label": "📄 Rapport (PDF)",
+            "url": "rpt.pdf",
+            "download": true
+          }
+        ]
+      },
+      {
+        "id": "iot-monitor",
+        "title": "Surveillance Environnementale Connectée",
+        "emoji": "🌡️",
+        "badge": "IoT",
+        "tags": ["iot"],
+        "summary": "Conception d'un nœud de capteurs autonome pour la surveillance en temps réel.",
+        "image": "assets/images/projects/iot.jpg",
+        "objective": "Monitoring environnemental temps réel.",
+        "tech": "ESP32, MQTT, Node-RED, InfluxDB"
+      },
+      {
+        "id": "access-control",
+        "title": "Contrôle d'Accès Industriel",
+        "emoji": "🚪",
+        "badge": "Automatisme",
+        "tags": ["automatisme"],
+        "summary": "Système automatisé de gestion d'ouverture sécurisée en milieu industriel.",
+        "image": "assets/images/projects/access.jpg",
+        "objective": "Sécuriser les accès industriels via PLC.",
+        "tech": "TIA Portal (Siemens), Unity Pro (Schneider)"
+      },
+      {
+        "id": "tri-carrousel",
+        "title": "Chaîne de Tri Automatisée",
+        "emoji": "⚙️",
+        "badge": "Industrie 4.0",
+        "tags": ["automatisme"],
+        "summary": "Pilotage d'un système de tri de pièces par matière et couleur avec IHM.",
+        "image": "assets/images/projects/carrousel.jpg",
+        "objective": "Optimisation des processus de tri.",
+        "tech": "API Siemens, IHM KTP700",
+        "links": [
+          {
+            "label": "📄 Dossier Tech",
+            "url": "hamari_Technique_Carrousel.pdf",
+            "download": true
+          }
+        ]
+      }
+    ]
+  };
+
+  function loadProjects() {
+    const container = document.getElementById('projects-container');
+    if (!container) return;
+
+    PROJECTS_DATA.professional.forEach(project => {
+      const article = createProjectCard(project);
+      container.appendChild(article);
+    });
+
+    // Réappliquer les animations
+    if (!prefersReduced && 'IntersectionObserver' in window) {
+      const newProjects = container.querySelectorAll('.animate');
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.2 });
+      newProjects.forEach(el => io.observe(el));
+    }
+  }
+
+  function createProjectCard(project) {
+    const article = document.createElement('article');
+    article.className = 'project animate';
+    article.setAttribute('data-tags', project.tags.join(','));
+
+    let linksHtml = '';
+    if (project.links && project.links.length > 0) {
+      linksHtml = '<div class="cta-row">' +
+        project.links.map(link =>
+          `<a class="btn ${link.download ? 'btn-primary' : 'btn-outline'}" 
+              href="${link.url}" 
+              target="_blank" 
+              rel="noopener"
+              ${link.download ? 'download' : ''}>
+            ${link.label}
+          </a>`
+        ).join('') +
+        '</div>';
+    }
+
+    article.innerHTML = `
+      <div class="project-header">
+        <h2>${project.emoji} ${project.title}</h2>
+        <span class="badge">${project.badge}</span>
+      </div>
+      ${project.image ? `<img src="${project.image}" alt="${project.title}" class="project-img">` : ''}
+      <p class="project-summary">${project.summary}</p>
+      <div class="project-details">
+        ${project.objective ? `
+          <div class="detail-block">
+            <strong>🎯 Objectif</strong>
+            <p>${project.objective}</p>
+          </div>` : ''}
+        ${project.stack || project.tech ? `
+          <div class="detail-block">
+            <strong>🛠️ ${project.stack ? 'Stack Technique' : 'Tech'}</strong>
+            <p>${project.stack || project.tech}</p>
+          </div>` : ''}
+        ${linksHtml}
+      </div>
+    `;
+
+    return article;
+  }
+
+  // Charger les projets au démarrage
+  loadProjects();
 
 });

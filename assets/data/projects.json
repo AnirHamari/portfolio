@@ -1,0 +1,59 @@
+{
+  "professional": [
+    {
+      "id": "altair-platform",
+      "title": "Plateforme de Gestion Scolaire",
+      "emoji": "🧩",
+      "badge": "Full Stack",
+      "tags": ["fullstack"],
+      "summary": "Refonte complète d'une application de suivi parents-élèves pour Altair Group.",
+      "image": "",
+      "objective": "Migrer une architecture legacy vers une stack moderne et sécurisée.",
+      "stack": "Django REST, React.js, PostgreSQL, Docker",
+      "links": [
+        { 
+          "label": "📄 Rapport (PDF)", 
+          "url": "rpt.pdf", 
+          "download": true 
+        }
+      ]
+    },
+    {
+      "id": "iot-monitoring",
+      "title": "Surveillance Environnementale Connectée",
+      "emoji": "🌡️",
+      "badge": "IoT & Data",
+      "tags": ["iot"],
+      "summary": "Conception d'un nœud de capteurs autonome pour monitoring environnemental.",
+      "image": "",
+      "tech": "ESP32, MQTT, Node-RED, InfluxDB"
+    },
+    {
+      "id": "industrial-access",
+      "title": "Contrôle d'Accès Industriel",
+      "emoji": "🚪",
+      "badge": "Automatisme",
+      "tags": ["automatisme"],
+      "summary": "Système automatisé de gestion d'ouverture sécurisée en milieu industriel.",
+      "image": "",
+      "tech": "TIA Portal (Siemens), Unity Pro (Schneider)"
+    },
+    {
+      "id": "sorting-system",
+      "title": "Chaîne de Tri Automatisée",
+      "emoji": "⚙️",
+      "badge": "Supervision",
+      "tags": ["automatisme"],
+      "summary": "Pilotage d'un système de tri de pièces par matière et couleur.",
+      "image": "",
+      "tech": "API Siemens, IHM KTP700",
+      "links": [
+        { 
+          "label": "📄 Dossier Tech", 
+          "url": "hamari_Technique_Carrousel.pdf", 
+          "download": true 
+        }
+      ]
+    }
+  ]
+}

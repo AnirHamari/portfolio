@@ -18,8 +18,8 @@
   <header class="site-header" role="banner">
     <div class="container header-bar">
       <a class="brand" href="index.html" aria-label="Accueil Hamari Anir">
-        <span class="brand-icon">✈️</span>
-        <span class="brand-text">HAMARI <span class="brand-accent">ANIR</span></span>
+        <span class="brand-icon">⚙️</span>
+        <span class="brand-text">ANIR HAMARI <span class="brand-accent">| ÉTUDIANT BUT GEII</span></span>
       </a>
       <!-- Dark Mode Enforced -->
     </div>
@@ -47,82 +47,12 @@
         <button class="filter-btn active" data-filter="all">Tous</button>
         <button class="filter-btn" data-filter="automatisme">Industrie & Auto</button>
         <button class="filter-btn" data-filter="iot">IoT & Embarqué</button>
-        <button class="filter-btn" data-filter="fullstack">Web & Soft</button>
+        <button class="filter-btn" data-filter="web">Web & Soft</button>
       </div>
 
-      <div class="projects-grid">
-
-        <!-- 1. STAGE FULL STACK (PRO) -->
-        <article class="project animate" data-tags="fullstack">
-          <div class="project-header">
-            <h2>🧩 Plateforme de Gestion Scolaire (Stage Altair)</h2>
-            <span class="badge">Full Stack</span>
-          </div>
-          <p class="project-summary">Refonte complète d'une application de suivi parents-élèves.</p>
-          <div class="project-details">
-            <div class="detail-block">
-              <strong>🎯 Objectif</strong>
-              <p>Migrer une architecture legacy vers une stack moderne et sécurisée.</p>
-            </div>
-            <div class="detail-block">
-              <strong>🛠️ Stack Technique</strong>
-              <p>Django REST, React.js, PostgreSQL, Docker</p>
-            </div>
-          </div>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="rpt.pdf" target="_blank" rel="noopener" download>📄 Rapport (PDF)</a>
-          </div>
-        </article>
-
-        <!-- 2. IOT CAPTEURS (PRO) -->
-        <article class="project animate" data-tags="iot">
-          <div class="project-header">
-            <h2>🌡️ Surveillance Environnementale Connectée</h2>
-            <span class="badge">IoT & Data</span>
-          </div>
-          <p class="project-summary">Conception d'un nœud de capteurs autonome.</p>
-          <div class="project-details">
-            <div class="detail-block">
-              <strong>tech</strong>
-              <p>ESP32, MQTT, Node-RED, InfluxDB</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- 3. PORTE DE GARAGE (PRO) -->
-        <article class="project animate" data-tags="automatisme">
-          <div class="project-header">
-            <h2>🚪 Contrôle d'Accès Industriel</h2>
-            <span class="badge">Automatisme</span>
-          </div>
-          <p class="project-summary">Système automatisé de gestion d'ouverture sécurisée.</p>
-          <div class="project-details">
-            <div class="detail-block">
-              <strong>tech</strong>
-              <p>TIA Portal (Siemens), Unity Pro (Schneider)</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- 4. CARROUSEL (PRO) -->
-        <article class="project animate" data-tags="automatisme">
-          <div class="project-header">
-            <h2>⚙️ Chaîne de Tri Automatisée</h2>
-            <span class="badge">Supervision</span>
-          </div>
-          <p class="project-summary">Pilotage d'un système de tri de pièces par matière et couleur.</p>
-          <div class="project-details">
-            <div class="detail-block">
-              <strong>tech</strong>
-              <p>API Siemens, IHM KTP700</p>
-            </div>
-            <div class="cta-row">
-              <a class="btn btn-outline" href="hamari_Technique_Carrousel.pdf" target="_blank" rel="noopener"
-                download>📄 Dossier Tech</a>
-            </div>
-          </div>
-        </article>
-
+      <!-- Conteneur dynamique pour les projets chargés via JSON -->
+      <div id="projects-container" class="projects-grid">
+        <!-- Les projets seront chargés dynamiquement via JavaScript -->
       </div>
     </section>
   </main>

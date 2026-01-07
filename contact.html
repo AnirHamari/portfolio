@@ -17,10 +17,10 @@
   <header class="site-header" role="banner">
     <div class="container header-bar">
       <a class="brand" href="index.html" aria-label="Accueil Hamari Anir">
-        <span class="brand-icon">✈️</span>
+        <span class="brand-icon">⚙️</span>
         <span class="brand-text">HAMARI <span class="brand-accent">ANIR</span></span>
       </a>
-      <!-- Toggle Removed -->
+      <div class="header-tagline">Étudiant en 3ᵉ année BUT GEII — Parcours AII</div>
     </div>
   </header>
 
@@ -66,7 +66,8 @@
               <div class="icon-box">🔗</div>
               <div class="info-content">
                 <strong>Réseaux</strong>
-                <a href="https://linkedin.com/in/anir-hamari" target="_blank" rel="noopener">LinkedIn / Profil</a>
+                <a href="https://www.linkedin.com/in/anir-hamari-775618222" target="_blank" rel="noopener">LinkedIn /
+                  Profil</a>
               </div>
             </li>
           </ul>
@@ -75,7 +76,10 @@
         <!-- Carte Formulaire -->
         <div class="form-card">
           <h2>Envoyer un message</h2>
-          <form action="#" method="post">
+          <form action="https://formspree.io/f/anir.hamari23@gmail.com" method="POST" id="contact-form">
+            <!-- Formspree - Envoie directement à votre email -->
+            <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio">
+
             <div class="form-group">
               <label for="name">Votre Nom</label>
               <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
@@ -122,6 +126,18 @@
       <p class="copyright">&copy; 2026 Hamari Anir.</p>
     </div>
   </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="toast">
+    <div class="toast-content">
+      <div class="toast-icon">✅</div>
+      <div class="toast-text">
+        <strong>Message envoyé !</strong>
+        <p>Je vous répondrai dans les plus brefs délais.</p>
+      </div>
+    </div>
+    <button class="toast-close" aria-label="Fermer">✕</button>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>
