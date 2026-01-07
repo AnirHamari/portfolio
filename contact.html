@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -9,104 +9,237 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
-  <meta name="description" content="📧 Contactez moi pour toute opportunité professionnelle (ou autres si besoin).">
+  <meta name="description" content="Contactez Hamari Anir pour toute opportunité professionnelle.">
+
+  <!-- Styles EXCLUSIFS à la page Contact (Cinématique & Équilibré) -->
+  <style>
+    :root {
+      --contact-bg: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+      --contact-accent: #4cc9f0;
+      --contact-card: rgba(255, 255, 255, 0.03);
+      --contact-border: rgba(255, 255, 255, 0.1);
+    }
+
+    body.contact-page {
+      background: var(--contact-bg) !important;
+      overflow-x: hidden;
+    }
+
+    .contact-hero {
+      padding: 100px 0 60px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-out;
+    }
+
+    .contact-hero.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .contact-title {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 900;
+      background: linear-gradient(to right, #fff, var(--contact-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    /* Dashboard de Connectivité Cinématique */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto 100px;
+    }
+
+    .c-card {
+      background: var(--contact-card);
+      backdrop-filter: blur(15px);
+      border: 1px solid var(--contact-border);
+      border-radius: 24px;
+      padding: 40px;
+      color: white;
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    .c-card.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .c-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      border-color: var(--contact-accent);
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(76, 201, 240, 0.2);
+    }
+
+    .c-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: 0.5s;
+    }
+
+    .c-card:hover::after {
+      left: 100%;
+    }
+
+    .c-icon {
+      font-size: 3.5rem;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    }
+
+    .c-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--contact-accent);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .c-value {
+      font-size: 1.3rem;
+      font-weight: 500;
+      word-break: break-all;
+    }
+
+    .c-action {
+      margin-top: 30px;
+      padding: 12px 25px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .c-card:hover .c-action {
+      background: var(--contact-accent);
+      color: #000;
+    }
+
+    /* Copyright épuré */
+    .contact-footer {
+      text-align: center;
+      padding: 40px;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
-<body>
+<body class="contact-page">
 
   <header class="site-header" role="banner">
     <div class="container header-bar">
-      <a class="brand" href="index.html" aria-label="Accueil Hamari Anir">
+      <a class="brand" href="index.html" aria-label="Accueil">
         <span class="brand-icon">⚙️</span>
         <span class="brand-text">HAMARI <span class="brand-accent">ANIR</span></span>
       </a>
-      <div class="header-tagline">Étudiant en 3ᵉ année BUT GEII — Parcours AII</div>
+      <div class="header-tagline">Étudiant en 3ᵉ année BUT GEII</div>
     </div>
   </header>
 
   <main>
-    <section id="contact" class="container animate">
-      <h1 class="section-title">📬 Me Contacter</h1>
-
-      <div class="connectivity-grid">
-
-        <!-- Email Card -->
-        <div class="connect-card reveal delay-1">
-          <div class="card-glow"></div>
-          <div class="connect-icon">📧</div>
-          <div class="connect-info">
-            <h3>Email Professionnel</h3>
-            <p class="select-text">anir.hamari23@gmail.com</p>
-          </div>
-          <button class="copy-btn" data-copy="anir.hamari23@gmail.com" aria-label="Copier l'email">
-            <span class="btn-text">Copier</span>
-            <span class="btn-icon">📋</span>
-          </button>
-        </div>
-
-        <!-- LinkedIn Card -->
-        <a href="https://www.linkedin.com/in/anir-hamari-775618222" target="_blank" rel="noopener"
-          class="connect-card reveal delay-2">
-          <div class="card-glow"></div>
-          <div class="connect-icon">🔗</div>
-          <div class="connect-info">
-            <h3>Profil LinkedIn</h3>
-            <p>Réseau Professionnel</p>
-          </div>
-          <div class="action-link">Voir le profil ➜</div>
-        </a>
-
-        <!-- Phone Card -->
-        <div class="connect-card reveal delay-3">
-          <div class="card-glow"></div>
-          <div class="connect-icon">📱</div>
-          <div class="connect-info">
-            <h3>Téléphone</h3>
-            <p>06 46 38 27 04</p>
-          </div>
-          <a href="tel:0646382704" class="action-link">Appeler ➔</a>
-        </div>
-
-        <!-- Location Card -->
-        <div class="connect-card reveal delay-3">
-          <div class="card-glow"></div>
-          <div class="connect-icon">📍</div>
-          <div class="connect-info">
-            <h3>Localisation</h3>
-            <p>Crépy-en-Valois (60), France</p>
-          </div>
-          <span class="location-badge">Disponible Mobilité</span>
-        </div>
-
+    <section class="contact-hero" id="reveal-hero">
+      <div class="container">
+        <h1 class="contact-title">Parlons <span style="color: var(--contact-accent);">Futur.</span></h1>
+        <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+          Actuellement à la recherche d'un stage (Mars 2026). Une idée, un projet ou une opportunité ? Connectons-nous.
+        </p>
       </div>
     </section>
+
+    <div class="contact-grid">
+      <!-- LinkedIn (LINK UPDATED) -->
+      <a href="https://www.linkedin.com/in/anir-hamari/" target="_blank" rel="noopener" class="c-card reveal-item">
+        <div class="c-icon">🔗</div>
+        <div class="c-label">Réseau</div>
+        <div class="c-value">LinkedIn</div>
+        <div class="c-action">Ouvrir le profil ➔</div>
+      </a>
+
+      <!-- Direct Email -->
+      <a href="mailto:anir.hamari23@gmail.com" class="c-card reveal-item">
+        <div class="c-icon">📧</div>
+        <div class="c-label">Message Direct</div>
+        <div class="c-value">anir.hamari23@gmail.com</div>
+        <div class="c-action">Envoyer un mail ➔</div>
+      </a>
+
+      <!-- Phone -->
+      <div class="c-card reveal-item">
+        <div class="c-icon">📱</div>
+        <div class="c-label">Téléphone</div>
+        <div class="c-value">06 46 38 27 04</div>
+        <a href="tel:0646382704" class="c-action">Appeler maintenant ➔</a>
+      </div>
+
+      <!-- Location -->
+      <div class="c-card reveal-item">
+        <div class="c-icon">📍</div>
+        <div class="c-label">Localisation</div>
+        <div class="c-value">Oise (60), France</div>
+        <div class="c-action" style="background: rgba(76, 201, 240, 0.1); color: var(--contact-accent);">Disponible
+          Mobilité</div>
+      </div>
+    </div>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-content animate">
-      <div class="footer-icons-row">
-        <a href="index.html" class="footer-icon-link" aria-label="Accueil">
-          <span class="icon">🏠</span>
-          <span class="text">Accueil</span>
-        </a>
-        <a href="about.html" class="footer-icon-link" aria-label="Compétences">
-          <span class="icon">👤</span>
-          <span class="text">À propos</span>
-        </a>
-        <a href="projects.html" class="footer-icon-link" aria-label="Projets">
-          <span class="icon">💼</span>
-          <span class="text">Projets</span>
-        </a>
-        <a href="contact.html" class="footer-icon-link active" aria-label="Contact">
-          <span class="icon">✉️</span>
-          <span class="text">Contact</span>
-        </a>
-      </div>
-      <p class="copyright">&copy; 2026 Hamari Anir. Tous droits réservés.</p>
-    </div>
+  <footer class="contact-footer">
+    <p>© 2026 Hamari Anir. Tous droits réservés.</p>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <!-- Script EXCLUSIF à la page Contact (Cinématique) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hero = document.getElementById('reveal-hero');
+      const items = document.querySelectorAll('.reveal-item');
+
+      // Effet cinématique au chargement
+      setTimeout(() => {
+        hero.classList.add('visible');
+      }, 200);
+
+      // Intersection Observer pour les cartes
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 150);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      items.forEach(item => observer.observe(item));
+    });
+  </script>
+
+  <!-- Main JS fallback if needed -->
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
