@@ -40,7 +40,7 @@
   </header>
 
   <main id="contenu" tabindex="-1">
-    <section class="hero-block animate">
+    <section class="hero-block reveal">
       <div class="container hero-grid centered-hero">
 
         <!-- Photo Profile -->
@@ -49,51 +49,63 @@
         </div>
 
         <div class="hero-text full-width">
-          <h1 class="hero-title-huge">HAMARI <span class="accent">ANIR</span></h1>
-          <h2 class="hero-subtitle">Étudiant en Génie Électrique & Informatique Industrielle</h2>
+          <!-- Terminal Badge (Dynamisme) -->
+          <div class="terminal-badge reveal delay-1">
+            <span class="terminal-prompt">user@anir:~$</span> <span class="typing-text">init_portfolio.sh
+              --mode=humble</span>
+          </div>
 
-          <p class="lead">
+          <h1 class="hero-title-huge reveal delay-2">HAMARI <span class="accent">ANIR</span></h1>
+          <h2 class="hero-subtitle reveal delay-2">Étudiant en Génie Électrique & Informatique Industrielle</h2>
+
+          <p class="lead reveal delay-3">
             Concepteur de solutions technologiques avancées.
             <br>
             <span class="highlight-text">Automatisme • systèmes embarqués • projets IoT</span>
           </p>
 
-          <!-- Section Status Dashboard (Pro & Dynamique) -->
-          <div class="status-dashboard animate-delay-1">
-            <div class="status-item">
-              <span class="status-dot online"></span>
-              <span class="status-label">Parcours :</span>
-              <span class="status-value">BUT GEII (AII)</span>
-            </div>
-            <div class="status-item">
-              <span class="status-dot learning"></span>
-              <span class="status-label">En recherche :</span>
-              <span class="status-value">Stage Mars 2026</span>
+          <!-- Ticker Déroulant (Dynamisme Max) -->
+          <div class="tech-ticker reveal delay-3">
+            <div class="ticker-track">
+              <span class="ticker-item">Embedded C</span>
+              <span class="ticker-item">Linux Kernel</span>
+              <span class="ticker-item">Python</span>
+              <span class="ticker-item">PLC Siemens</span>
+              <span class="ticker-item">MQTT</span>
+              <span class="ticker-item">Cybersecurity</span>
+              <!-- Repeat for loop -->
+              <span class="ticker-item">Embedded C</span>
+              <span class="ticker-item">Linux Kernel</span>
+              <span class="ticker-item">Python</span>
+              <span class="ticker-item">PLC Siemens</span>
+              <span class="ticker-item">MQTT</span>
+              <span class="ticker-item">Cybersecurity</span>
             </div>
           </div>
+
         </div>
       </div>
 
-      <blockquote class="quote">
+      <blockquote class="quote reveal delay-3">
         «&nbsp;La curiosité alimente l'innovation.&nbsp;»
       </blockquote>
     </section>
 
-    <!-- Section Valeurs / Approche -->
-    <section class="values-section animate">
+    <!-- Section Valeurs / Approche (Déroulement au scroll) -->
+    <section class="values-section reveal">
       <div class="container">
         <div class="values-grid">
-          <div class="value-card">
+          <div class="value-card reveal delay-1">
             <div class="value-icon">🔍</div>
             <h3>Curiosité Technique</h3>
             <p>Toujours chercher à comprendre le "comment" derrière chaque bit et chaque composant.</p>
           </div>
-          <div class="value-card">
+          <div class="value-card reveal delay-2">
             <div class="value-icon">🛡️</div>
             <h3>Rigueur & Sécurité</h3>
             <p>Concevoir des systèmes où la fiabilité et la protection des données ne sont pas des options.</p>
           </div>
-          <div class="value-card">
+          <div class="value-card reveal delay-3">
             <div class="value-icon">🤝</div>
             <h3>Esprit d'Équipe</h3>
             <p>Parce que les plus grands projets naissent de la collaboration et du partage de connaissances.</p>
@@ -102,8 +114,7 @@
       </div>
     </section>
 
-    <!-- Section tags/compétences (facultatif) -->
-    <section class="highlights" aria-labelledby="skills-title">
+    <section class="highlights reveal" aria-labelledby="skills-title">
       <div class="container">
         <h2 id="skills-title" class="h2">Domaines clés</h2>
         <ul class="pill-list" role="list">
