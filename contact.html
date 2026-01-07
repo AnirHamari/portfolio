@@ -29,8 +29,8 @@
       <h1 class="section-title">📬 Me Contacter</h1>
 
       <div class="contact-wrapper">
-        <!-- Carte Infos -->
-        <div class="contact-card">
+        <!-- Carte Infos (Dynamisme Reveal) -->
+        <div class="contact-card reveal">
           <div class="contact-header">
             <h2>Discutons de votre projet</h2>
             <p>
@@ -72,72 +72,9 @@
             </li>
           </ul>
         </div>
-
-        <!-- Carte Formulaire -->
-        <div class="form-card">
-          <h2>Envoyer un message</h2>
-          <form action="https://formspree.io/f/anir.hamari23@gmail.com" method="POST" id="contact-form">
-            <!-- Formspree - Envoie directement à votre email -->
-            <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio">
-
-            <div class="form-group">
-              <label for="name">Votre Nom</label>
-              <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Votre Email</label>
-              <input type="email" id="email" name="email" placeholder="jean@exemple.com" required>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Votre Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Bonjour, je vous contacte pour..."
-                required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary full-width">📨 Envoyer le message</button>
-          </form>
-        </div>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content animate">
-      <div class="footer-icons-row">
-        <a href="index.html" class="footer-icon-link" aria-label="Accueil">
-          <span class="icon">🏠</span>
-          <span class="text">Accueil</span>
-        </a>
-        <a href="about.html" class="footer-icon-link" aria-label="Compétences">
-          <span class="icon">👤</span>
-          <span class="text">À propos</span>
-        </a>
-        <a href="projects.html" class="footer-icon-link" aria-label="Projets">
-          <span class="icon">💼</span>
-          <span class="text">Projets</span>
-        </a>
-        <a href="contact.html" class="footer-icon-link active" aria-label="Contact">
-          <span class="icon">✉️</span>
-          <span class="text">Contact</span>
-        </a>
-      </div>
-      <p class="copyright">&copy; 2026 Hamari Anir.</p>
-    </div>
-  </footer>
-
-  <!-- Toast Notification -->
-  <div id="toast-notification" class="toast">
-    <div class="toast-content">
-      <div class="toast-icon">✅</div>
-      <div class="toast-text">
-        <strong>Message envoyé !</strong>
-        <p>Je vous répondrai dans les plus brefs délais.</p>
-      </div>
-    </div>
-    <button class="toast-close" aria-label="Fermer">✕</button>
-  </div>
 
   <script src="assets/js/main.js"></script>
 </body>

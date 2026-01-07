@@ -71,65 +71,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------------------------
-   * 4) Formulaire de contact Web3Forms + Toast
+   * 4) Scroll Reveal Observer (Dynamisme Max)
    * --------------------------------- */
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+  const revealOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  };
 
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      submitBtn.textContent = '⏳ Envoi en cours...';
-      submitBtn.disabled = true;
-
-      try {
-        const formData = new FormData(form);
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-        if (response.ok) {
-          showToast('Message envoyé !', 'Je vous répondrai dans les plus brefs délais.');
-          form.reset();
-        } else {
-          showToast('Erreur d\'envoi', 'Veuillez réessayer ou m\'envoyer un email direct.', 'error');
-        }
-      } catch (error) {
-        console.error('Erreur:', error);
-        showToast('Erreur réseau', 'Veuillez vérifier votre connexion.', 'error');
-      } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        revealObserver.unobserve(entry.target);
       }
     });
-  }
+  }, revealOptions);
 
-  // Fonction pour afficher le toast
-  function showToast(title, message, type = 'success') {
-    const toast = document.getElementById('toast-notification');
-    if (!toast) return;
-
-    const icon = toast.querySelector('.toast-icon');
-    const titleEl = toast.querySelector('.toast-text strong');
-    const messageEl = toast.querySelector('.toast-text p');
-
-    icon.textContent = type === 'success' ? '✅' : '⚠️';
-    titleEl.textContent = title;
-    messageEl.textContent = message;
-
-    toast.classList.add('show');
-
-    const closeBtn = toast.querySelector('.toast-close');
-    const close = () => toast.classList.remove('show');
-
-    closeBtn.addEventListener('click', close, { once: true });
-    setTimeout(close, 5000); // Fermeture automatique après 5s
-  }
+  document.querySelectorAll('.reveal').forEach(el => {
+    revealObserver.observe(el);
+  });
 
   /* ---------------------------------
    * 5) Filtres de projets (data-filter)
