@@ -28,50 +28,56 @@
     <section id="contact" class="container animate">
       <h1 class="section-title">📬 Me Contacter</h1>
 
-      <div class="contact-wrapper">
-        <!-- Carte Infos (Dynamisme Reveal) -->
-        <div class="contact-card reveal">
-          <div class="contact-header">
-            <h2>Discutons de votre projet</h2>
-            <p>
-              Je suis actuellement à la recherche d'un <strong>stage de 3 mois</strong> (Mars 2026).
-              N'hésitez pas à me contacter pour toute opportunité en <strong>Automatisme</strong>,
-              <strong>Informatique Industrielle</strong> ou <strong>Développement</strong>.
-            </p>
-          </div>
+      <div class="connectivity-grid">
 
-          <ul class="contact-list">
-            <li>
-              <div class="icon-box">📧</div>
-              <div class="info-content">
-                <strong>Email</strong>
-                <a href="mailto:anir.hamari23@gmail.com">anir.hamari23@gmail.com</a>
-              </div>
-            </li>
-            <li>
-              <div class="icon-box">📱</div>
-              <div class="info-content">
-                <strong>Téléphone</strong>
-                <span>06 46 38 27 04</span>
-              </div>
-            </li>
-            <li>
-              <div class="icon-box">📍</div>
-              <div class="info-content">
-                <strong>Localisation</strong>
-                <span>11 rue Impasse Charles Cureau,<br>Crépy-en-Valois (60)</span>
-              </div>
-            </li>
-            <li>
-              <div class="icon-box">🔗</div>
-              <div class="info-content">
-                <strong>Réseaux</strong>
-                <a href="https://www.linkedin.com/in/anir-hamari-775618222" target="_blank" rel="noopener">LinkedIn /
-                  Profil</a>
-              </div>
-            </li>
-          </ul>
+        <!-- Email Card -->
+        <div class="connect-card reveal delay-1">
+          <div class="card-glow"></div>
+          <div class="connect-icon">📧</div>
+          <div class="connect-info">
+            <h3>Email Professionnel</h3>
+            <p class="select-text">anir.hamari23@gmail.com</p>
+          </div>
+          <button class="copy-btn" data-copy="anir.hamari23@gmail.com" aria-label="Copier l'email">
+            <span class="btn-text">Copier</span>
+            <span class="btn-icon">📋</span>
+          </button>
         </div>
+
+        <!-- LinkedIn Card -->
+        <a href="https://www.linkedin.com/in/anir-hamari-775618222" target="_blank" rel="noopener"
+          class="connect-card reveal delay-2">
+          <div class="card-glow"></div>
+          <div class="connect-icon">🔗</div>
+          <div class="connect-info">
+            <h3>Profil LinkedIn</h3>
+            <p>Réseau Professionnel</p>
+          </div>
+          <div class="action-link">Voir le profil ➜</div>
+        </a>
+
+        <!-- Phone Card -->
+        <div class="connect-card reveal delay-3">
+          <div class="card-glow"></div>
+          <div class="connect-icon">📱</div>
+          <div class="connect-info">
+            <h3>Téléphone</h3>
+            <p>06 46 38 27 04</p>
+          </div>
+          <a href="tel:0646382704" class="action-link">Appeler ➔</a>
+        </div>
+
+        <!-- Location Card -->
+        <div class="connect-card reveal delay-3">
+          <div class="card-glow"></div>
+          <div class="connect-icon">📍</div>
+          <div class="connect-info">
+            <h3>Localisation</h3>
+            <p>Crépy-en-Valois (60), France</p>
+          </div>
+          <span class="location-badge">Disponible Mobilité</span>
+        </div>
+
       </div>
     </section>
   </main>

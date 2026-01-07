@@ -92,6 +92,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ---------------------------------
+   * 5) Bouton Copier (Presse-papier)
+   * --------------------------------- */
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.getAttribute('data-copy');
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = btn.querySelector('.btn-text').textContent;
+        btn.classList.add('copied');
+        btn.querySelector('.btn-text').textContent = 'Copié !';
+        btn.querySelector('.btn-icon').textContent = '✔️';
+
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.querySelector('.btn-text').textContent = originalText;
+          btn.querySelector('.btn-icon').textContent = '📋';
+        }, 2000);
+      });
+    });
+  });
+
+  /* ---------------------------------
    * 5) Filtres de projets (data-filter)
    * --------------------------------- */
   document.addEventListener('click', (e) => {
