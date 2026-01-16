@@ -190,6 +190,93 @@ document.addEventListener('DOMContentLoaded', () => {
             "download": true
           }
         ]
+      },
+      {
+        "id": "ai-ethics",
+        "title": "Les enjeux de l'Intelligence Artificielle",
+        "emoji": "🤖⚖️",
+        "badge": "Rapport académique",
+        "tags": ["web"],
+        "summary": "Synthèse des enjeux éthiques de l'IA : biais algorithmiques, impacts sociétaux et régulation 🧠⚖️",
+        "image": "assets/images/ai-ethics-thumb.png",
+        "objective": "Analyser les défis éthiques et réglementaires de l'IA.",
+        "tech": "Recherche documentaire, analyse critique",
+        "links": [
+          {
+            "label": "📄 Télécharger (PDF)",
+            "url": "lesenjeuxd'artificielle.pdf",
+            "download": true
+          }
+        ]
+      },
+      {
+        "id": "sae-gestion-robot",
+        "title": "SAE — Gestion de projet (Robot)",
+        "emoji": "🗂️📅",
+        "badge": "SAE / Gestion",
+        "tags": ["automatisme"],
+        "summary": "Planification et organisation d'un projet robotique avec suivi des tâches 📊🤖",
+        "image": "assets/images/sae-gestion-thumb.png",
+        "objective": "Gérer un projet robotique de A à Z.",
+        "tech": "Diagramme de Gantt, gestion de tâches",
+        "links": [
+          {
+            "label": "📄 Compte rendu (PDF)",
+            "url": "CRautoSAEGUEYE-HAMARI.pdf",
+            "download": true
+          }
+        ]
+      },
+      {
+        "id": "projet-capteur",
+        "title": "Projet CAPTEUR — Compte rendu",
+        "emoji": "📡📈",
+        "badge": "SAE / Capteur",
+        "tags": ["iot"],
+        "summary": "Projet capteur avec acquisition de données, analyse et interprétation 📊🔬",
+        "image": "assets/images/capteur-thumb.png",
+        "objective": "Mettre en œuvre un système d'acquisition de données.",
+        "tech": "Capteurs, acquisition de données, analyse",
+        "links": [
+          {
+            "label": "📄 Télécharger (PDF)",
+            "url": "Compte Rendu du Projet CAPTEUR.pdf",
+            "download": true
+          }
+        ]
+      },
+      {
+        "id": "tp-matlab",
+        "title": "TP MATLAB — FFT & intégration numérique",
+        "emoji": "📊🧮",
+        "badge": "TP / Calcul",
+        "tags": ["web"],
+        "summary": "Génération de signaux, transformée de Fourier, intégration numérique 📈✨",
+        "image": "matlab-project.png",
+        "objective": "Maîtriser le traitement du signal numérique.",
+        "tech": "MATLAB, FFT, intégration/dérivation numérique"
+      },
+      {
+        "id": "projet-reseaux",
+        "title": "Projet Réseaux — Diagnostic & connectivité",
+        "emoji": "🌐🧰",
+        "badge": "Réseau",
+        "tags": ["iot"],
+        "summary": "Tests de connectivité réseau et diagnostic avec commandes système 🔌📡",
+        "image": "reseaux.png",
+        "objective": "Diagnostiquer et résoudre des problèmes réseau.",
+        "tech": "Ping, commandes réseau, diagnostic"
+      },
+      {
+        "id": "app-vbnet",
+        "title": "Application de gestion scolaire — VB",
+        "emoji": "🧑🏫🗃️",
+        "badge": "Projet applicatif",
+        "tags": ["web"],
+        "summary": "Gestion scolaire avec authentification multi-rôles et gestion des notes 📚👨‍🎓",
+        "image": "vbnet-project.png",
+        "objective": "Développer une application de gestion complète.",
+        "tech": "VB.NET, Visual Studio, WinForms, SQL"
       }
     ]
   };
