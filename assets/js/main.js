@@ -140,9 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "badge": "Stage Altair",
         "tags": ["web"],
         "summary": "Refonte complète d'une application de suivi parents-élèves (Django/React). Migration d'architecture legacy vers moderne.",
-        "image": "assets/images/projects/altair.jpg",
+        "image": "altair.png",
         "objective": "Moderniser et sécuriser l'accès aux données scolaires.",
-        "tech": "Django REST, React.js, PostgreSQL, Docker",
+        "tech": "Django REST, React.js, PostgreSQL ...",
         "links": [
           {
             "label": "📄 Rapport (PDF)",
@@ -152,26 +152,15 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
       },
       {
-        "id": "iot-monitor",
-        "title": "Surveillance Environnementale Connectée",
-        "emoji": "🌡️",
-        "badge": "IoT",
-        "tags": ["iot"],
-        "summary": "Conception d'un nœud de capteurs autonome pour la surveillance en temps réel.",
-        "image": "assets/images/projects/iot.jpg",
-        "objective": "Monitoring environnemental temps réel.",
-        "tech": "ESP32, MQTT, Node-RED, InfluxDB"
-      },
-      {
         "id": "access-control",
-        "title": "Contrôle d'Accès Industriel",
+        "title": "Automatisation de porte de garage.",
         "emoji": "🚪",
         "badge": "Automatisme",
         "tags": ["automatisme"],
         "summary": "Système automatisé de gestion d'ouverture sécurisée en milieu industriel.",
-        "image": "assets/images/projects/access.jpg",
+        "image": "porte.png",
         "objective": "Sécuriser les accès industriels via PLC.",
-        "tech": "TIA Portal (Siemens), Unity Pro (Schneider)"
+        "tech": "Porte logiqueTIA Portal (Siemens), Unity Pro (Schneider)"
       },
       {
         "id": "tri-carrousel",
@@ -230,17 +219,17 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         "id": "projet-capteur",
         "title": "Projet CAPTEUR — Compte rendu",
-        "emoji": "📡📈",
-        "badge": "SAE / Capteur",
+        "emoji": "📡📈🌡️",
+        "badge": "Système embarqué",
         "tags": ["iot"],
-        "summary": "Projet capteur avec acquisition de données, analyse et interprétation 📊🔬",
-        "image": "assets/images/capteur-thumb.png",
+        "summary": "Conception d'un nœud de capteurs autonome pour la surveillance en temps réel.📊🔬",
+        "image": "capteur.png",
         "objective": "Mettre en œuvre un système d'acquisition de données.",
-        "tech": "Capteurs, acquisition de données, analyse",
+        "tech": "Capteurs,ESP32, MQTT, acquisition de données, analyse",
         "links": [
           {
             "label": "📄 Télécharger (PDF)",
-            "url": "Compte Rendu du Projet CAPTEUR.pdf",
+            "url": "capteur.jpg",
             "download": true
           }
         ]
@@ -249,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "id": "tp-matlab",
         "title": "TP MATLAB — FFT & intégration numérique",
         "emoji": "📊🧮",
-        "badge": "TP / Calcul",
+        "badge": "Outils Mathématiques",
         "tags": ["web"],
         "summary": "Génération de signaux, transformée de Fourier, intégration numérique 📈✨",
         "image": "matlab-project.png",
