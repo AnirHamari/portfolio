@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
       links: [
         {
           label: "📄 Dossier technique",
-          url: "HAMARI-carousel.pdf",
+          url: "CRautoSAEGUEYE-HAMARI.pdf",
           download: true
         }
       ]
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ["robotique", "automatisme", "industrie"],
       summary:
         "🤖 Conception et programmation d’une cellule robotisée autonome assurant le tri automatisé d’écrous selon leur matière (métal / plastique), avec détection, manipulation et dépose alternée.",
-      image: "assets/images/sae-gestion-thumb.png",
+      image: "kuka.png",
       objective:
         "🎯 Automatiser un processus de tri industriel en garantissant la sécurité, la précision des trajectoires et une cadence stable, via un robot polyarticulé programmé en langage KRL.",
       tech:
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
       links: [
         {
           label: "📄 Télécharger (PDF)",
-          url: "capteur.jpg",
+          url: "iot.jpg",
           download: true
         }
       ]
