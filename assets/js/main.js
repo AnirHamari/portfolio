@@ -152,16 +152,17 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
       },
       {
-        "id": "access-control",
-        "title": "Automatisation de porte de garage.",
-        "emoji": "🚪",
-        "badge": "Automatisme",
-        "tags": ["automatisme"],
-        "summary": "Système automatisé de gestion d'ouverture sécurisée en milieu industriel.",
-        "image": "porte.png",
-        "objective": "Sécuriser les accès industriels via PLC.",
-        "tech": "Porte logiqueTIA Portal (Siemens), Unity Pro (Schneider)"
-      },
+  "id": "access-control",
+  "title": "Automatisation de porte de garage",
+  "emoji": "🚪",
+  "badge": "Automatisme",
+  "tags": ["automatisme"],
+  "summary": "🚪 Conception d’un système automatisé de commande d’ouverture et de fermeture d’une porte de garage, intégrant des logiques de sécurité et de contrôle.",
+  "image": "porte.png",
+  "objective": "🎯 Mettre en œuvre une automatisation fiable d’une porte de garage en assurant un fonctionnement sécurisé et cohérent avec les scénarios d’usage.",
+  "tech": "TIA Portal (Siemens), Unity Pro (Schneider), logique câblée et automatisée"
+},
+
       {
         {
   {
