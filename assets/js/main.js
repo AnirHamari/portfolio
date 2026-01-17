@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "links": [
           {
             "label": "📄 Dossier Tech",
-            "url": "hamari_Technique_Carrousel.pdf",
+            "url": "HAMARI-carousel.pdf",
             "download": true
           }
         ]
