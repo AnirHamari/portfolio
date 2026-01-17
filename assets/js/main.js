@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ["iot"],
       summary:
         "Conception d'un nœud de capteurs autonome pour la surveillance en temps réel.📊🔬",
-      image: "capteur.png",
+      image: "iot.png",
       objective: "Mettre en œuvre un système d'acquisition de données.",
       tech: "Capteurs,ESP32, MQTT, acquisition de données, analyse",
       links: [
