@@ -131,156 +131,172 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------------------------------
    * 6) Données et Chargement des projets
    * --------------------------------- */
-  const PROJECTS_DATA = {
-    "professional": [
-      {
-        "id": "altair-gestion",
-        "title": "Plateforme de Gestion Scolaire",
-        "emoji": "🧩",
-        "badge": "Stage Altair",
-        "tags": ["web"],
-        "summary": "Refonte complète d'une application de suivi parents-élèves (Django/React). Migration d'architecture legacy vers moderne.",
-        "image": "altair.png",
-        "objective": "Moderniser et sécuriser l'accès aux données scolaires.",
-        "tech": "Django REST, React.js, PostgreSQL ...",
-        "links": [
-          {
-            "label": "📄 Rapport (PDF)",
-            "url": "rpt.pdf",
-            "download": true
-          }
-        ]
-      },
-      {
-  "id": "access-control",
-  "title": "Automatisation de porte de garage",
-  "emoji": "🚪",
-  "badge": "Automatisme",
-  "tags": ["automatisme"],
-  "summary": "🚪 Conception d’un système automatisé de commande d’ouverture et de fermeture d’une porte de garage, intégrant des logiques de sécurité et de contrôle.",
-  "image": "porte.png",
-  "objective": "🎯 Mettre en œuvre une automatisation fiable d’une porte de garage en assurant un fonctionnement sécurisé et cohérent avec les scénarios d’usage.",
-  "tech": "TIA Portal (Siemens), Unity Pro (Schneider), logique câblée et automatisée"
-},
-
-      {
+ const PROJECTS_DATA = {
+  professional: [
+    {
+      id: "altair-gestion",
+      title: "Plateforme de Gestion Scolaire",
+      emoji: "🧩",
+      badge: "Stage Altair",
+      tags: ["web"],
+      summary:
+        "Refonte complète d'une application de suivi parents-élèves (Django/React). Migration d'architecture legacy vers moderne.",
+      image: "altair.png",
+      objective: "Moderniser et sécuriser l'accès aux données scolaires.",
+      tech: "Django REST, React.js, PostgreSQL ...",
+      links: [
         {
-  {
-  "id": "tri-carrousel",
-  "title": "Chaîne de Tri Automatisée",
-  "emoji": "⚙️",
-  "badge": "Industrie 4.0",
-  "tags": ["automatisme", "industrie"],
-  "summary": "⚙️ Conception et pilotage d’un système automatisé de tri de pièces cylindriques selon la hauteur, la couleur et la matière, avec supervision via IHM 🖥️.",
-  "image": "carousel.png",
-  "objective": "🎯 Automatiser et fiabiliser le processus de caractérisation et de tri de pièces industrielles tout en garantissant la sécurité, la répétabilité et la maintenabilité du système.",
-  "tech": "API Siemens S7-1500, IHM KTP700, capteurs capacitifs, inductifs et infrarouges, moteur pas-à-pas, pneumatique",
-  "links": [
+          label: "📄 Rapport (PDF)",
+          url: "rpt.pdf",
+          download: true
+        }
+      ]
+    },
+
     {
-      "label": "📄 Dossier technique",
-      "url": "HAMARI-carousel.pdf",
-      "download": true
-    }
-  ]
-}
+      id: "access-control",
+      title: "Automatisation de porte de garage",
+      emoji: "🚪",
+      badge: "Automatisme",
+      tags: ["automatisme"],
+      summary:
+        "🚪 Conception d’un système automatisé de commande d’ouverture et de fermeture d’une porte de garage, intégrant des logiques de sécurité et de contrôle.",
+      image: "porte.png",
+      objective:
+        "🎯 Mettre en œuvre une automatisation fiable d’une porte de garage en assurant un fonctionnement sécurisé et cohérent avec les scénarios d’usage.",
+      tech:
+        "TIA Portal (Siemens), Unity Pro (Schneider), logique câblée et automatisée",
+      links: [
+        {
+          label: "📄 Dossier technique",
+          url: "HAMARI-carousel.pdf",
+          download: true
+        }
+      ]
+    },
 
-    }
-  ]
-}
-
-          }
-        ]
-      },
-      {
-        "id": "ai-ethics",
-        "title": "Les enjeux de l'Intelligence Artificielle",
-        "emoji": "🤖⚖️",
-        "badge": "Rapport académique",
-        "tags": ["web"],
-        "summary": "Synthèse des enjeux éthiques de l'IA : biais algorithmiques, impacts sociétaux et régulation 🧠⚖️",
-        "image": "assets/images/ai-ethics-thumb.png",
-        "objective": "Analyser les défis éthiques et réglementaires de l'IA.",
-        "tech": "Recherche documentaire, analyse critique",
-        "links": [
-          {
-            "label": "📄 Télécharger (PDF)",
-            "url": "lesenjeuxd'artificielle.pdf",
-            "download": true
-          }
-        ]
-      },
-     {
-  "id": "sae-gestion-robot",
-  "title": "SAE — Robotique industrielle (KUKA KR6)",
-  "emoji": "🤖",
-  "badge": "SAE / Robotique",
-  "tags": ["robotique", "automatisme", "industrie"],
-  "summary": "🤖 Conception et programmation d’une cellule robotisée autonome assurant le tri automatisé d’écrous selon leur matière (métal / plastique), avec détection, manipulation et dépose alternée.",
-  "image": "assets/images/sae-gestion-thumb.png",
-  "objective": "🎯 Automatiser un processus de tri industriel en garantissant la sécurité, la précision des trajectoires et une cadence stable, via un robot polyarticulé programmé en langage KRL.",
-  "tech": "Robot KUKA KR6, KRL (KUKA Robot Language), WorkVisual, capteur inductif, capteur laser, aimant, mouvements PTP et LIN_REL",
-  "links": [
     {
-      "label": "📄 Dossier technique (PDF)",
-      "url": "Dossier-kuka.pdf",
-      "download": true
+      id: "tri-carrousel",
+      title: "Chaîne de Tri Automatisée",
+      emoji: "⚙️",
+      badge: "Industrie 4.0",
+      tags: ["automatisme", "industrie"],
+      summary:
+        "⚙️ Conception et pilotage d’un système automatisé de tri de pièces cylindriques selon la hauteur, la couleur et la matière, avec supervision via IHM 🖥️.",
+      image: "carousel.png",
+      objective:
+        "🎯 Automatiser et fiabiliser le processus de caractérisation et de tri de pièces industrielles tout en garantissant la sécurité, la répétabilité et la maintenabilité du système.",
+      tech:
+        "API Siemens S7-1500, IHM KTP700, capteurs capacitifs, inductifs et infrarouges, moteur pas-à-pas, pneumatique",
+      links: [
+        {
+          label: "📄 Dossier technique",
+          url: "HAMARI-carousel.pdf",
+          download: true
+        }
+      ]
+    },
+
+    {
+      id: "ai-ethics",
+      title: "Les enjeux de l'Intelligence Artificielle",
+      emoji: "🤖⚖️",
+      badge: "Rapport académique",
+      tags: ["web"],
+      summary:
+        "Synthèse des enjeux éthiques de l'IA : biais algorithmiques, impacts sociétaux et régulation 🧠⚖️",
+      image: "assets/images/ai-ethics-thumb.png",
+      objective: "Analyser les défis éthiques et réglementaires de l'IA.",
+      tech: "Recherche documentaire, analyse critique",
+      links: [
+        {
+          label: "📄 Télécharger (PDF)",
+          url: "lesenjeuxd'artificielle.pdf",
+          download: true
+        }
+      ]
+    },
+
+    {
+      id: "sae-gestion-robot",
+      title: "SAE — Robotique industrielle (KUKA KR6)",
+      emoji: "🤖",
+      badge: "SAE / Robotique",
+      tags: ["robotique", "automatisme", "industrie"],
+      summary:
+        "🤖 Conception et programmation d’une cellule robotisée autonome assurant le tri automatisé d’écrous selon leur matière (métal / plastique), avec détection, manipulation et dépose alternée.",
+      image: "assets/images/sae-gestion-thumb.png",
+      objective:
+        "🎯 Automatiser un processus de tri industriel en garantissant la sécurité, la précision des trajectoires et une cadence stable, via un robot polyarticulé programmé en langage KRL.",
+      tech:
+        "Robot KUKA KR6, KRL (KUKA Robot Language), WorkVisual, capteur inductif, capteur laser, aimant, mouvements PTP et LIN_REL",
+      links: [
+        {
+          label: "📄 Dossier technique (PDF)",
+          url: "Dossier-kuka.pdf",
+          download: true
+        }
+      ]
+    },
+
+    {
+      id: "projet-capteur",
+      title: "Projet CAPTEUR — Compte rendu",
+      emoji: "📡📈🌡️",
+      badge: "Système embarqué",
+      tags: ["iot"],
+      summary:
+        "Conception d'un nœud de capteurs autonome pour la surveillance en temps réel.📊🔬",
+      image: "capteur.png",
+      objective: "Mettre en œuvre un système d'acquisition de données.",
+      tech: "Capteurs,ESP32, MQTT, acquisition de données, analyse",
+      links: [
+        {
+          label: "📄 Télécharger (PDF)",
+          url: "capteur.jpg",
+          download: true
+        }
+      ]
+    },
+
+    {
+      id: "tp-matlab",
+      title: "TP MATLAB — FFT & intégration numérique",
+      emoji: "📊🧮",
+      badge: "Outils Mathématiques",
+      tags: ["web"],
+      summary: "Génération de signaux, transformée de Fourier, intégration numérique 📈✨",
+      image: "matlab-project.png",
+      objective: "Maîtriser le traitement du signal numérique.",
+      tech: "MATLAB, FFT, intégration/dérivation numérique"
+    },
+
+    {
+      id: "projet-reseaux",
+      title: "Projet Réseaux — Diagnostic & connectivité",
+      emoji: "🌐🧰",
+      badge: "Réseau",
+      tags: ["iot"],
+      summary: "Tests de connectivité réseau et diagnostic avec commandes système 🔌📡",
+      image: "reseaux.png",
+      objective: "Diagnostiquer et résoudre des problèmes réseau.",
+      tech: "Ping, commandes réseau, diagnostic"
+    },
+
+    {
+      id: "app-vbnet",
+      title: "Application de gestion scolaire — VB",
+      emoji: "🧑🏫🗃️",
+      badge: "Projet applicatif",
+      tags: ["web"],
+      summary: "Gestion scolaire avec authentification multi-rôles et gestion des notes 📚👨‍🎓",
+      image: "vbnet-project.png",
+      objective: "Développer une application de gestion complète.",
+      tech: "VB.NET, Visual Studio, WinForms, SQL"
     }
   ]
-}
+};
 
-      {
-        "id": "projet-capteur",
-        "title": "Projet CAPTEUR — Compte rendu",
-        "emoji": "📡📈🌡️",
-        "badge": "Système embarqué",
-        "tags": ["iot"],
-        "summary": "Conception d'un nœud de capteurs autonome pour la surveillance en temps réel.📊🔬",
-        "image": "capteur.png",
-        "objective": "Mettre en œuvre un système d'acquisition de données.",
-        "tech": "Capteurs,ESP32, MQTT, acquisition de données, analyse",
-        "links": [
-          {
-            "label": "📄 Télécharger (PDF)",
-            "url": "capteur.jpg",
-            "download": true
-          }
-        ]
-      },
-      {
-        "id": "tp-matlab",
-        "title": "TP MATLAB — FFT & intégration numérique",
-        "emoji": "📊🧮",
-        "badge": "Outils Mathématiques",
-        "tags": ["web"],
-        "summary": "Génération de signaux, transformée de Fourier, intégration numérique 📈✨",
-        "image": "matlab-project.png",
-        "objective": "Maîtriser le traitement du signal numérique.",
-        "tech": "MATLAB, FFT, intégration/dérivation numérique"
-      },
-      {
-        "id": "projet-reseaux",
-        "title": "Projet Réseaux — Diagnostic & connectivité",
-        "emoji": "🌐🧰",
-        "badge": "Réseau",
-        "tags": ["iot"],
-        "summary": "Tests de connectivité réseau et diagnostic avec commandes système 🔌📡",
-        "image": "reseaux.png",
-        "objective": "Diagnostiquer et résoudre des problèmes réseau.",
-        "tech": "Ping, commandes réseau, diagnostic"
-      },
-      {
-        "id": "app-vbnet",
-        "title": "Application de gestion scolaire — VB",
-        "emoji": "🧑🏫🗃️",
-        "badge": "Projet applicatif",
-        "tags": ["web"],
-        "summary": "Gestion scolaire avec authentification multi-rôles et gestion des notes 📚👨‍🎓",
-        "image": "vbnet-project.png",
-        "objective": "Développer une application de gestion complète.",
-        "tech": "VB.NET, Visual Studio, WinForms, SQL"
-      }
-    ]
-  };
 
   function loadProjects() {
     const container = document.getElementById('projects-container');
