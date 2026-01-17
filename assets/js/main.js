@@ -163,20 +163,30 @@ document.addEventListener('DOMContentLoaded', () => {
         "tech": "Porte logiqueTIA Portal (Siemens), Unity Pro (Schneider)"
       },
       {
-        "id": "tri-carrousel",
-        "title": "Chaîne de Tri Automatisée",
-        "emoji": "⚙️",
-        "badge": "Industrie 4.0",
-        "tags": ["automatisme"],
-        "summary": "Pilotage d'un système de tri de pièces par matière et couleur avec IHM.",
-        "image": "assets/images/projects/carrousel.jpg",
-        "objective": "Optimisation des processus de tri.",
-        "tech": "API Siemens, IHM KTP700",
-        "links": [
-          {
-            "label": "📄 Dossier Tech",
-            "url": "HAMARI-carousel.pdf",
-            "download": true
+        {
+  {
+  "id": "tri-carrousel",
+  "title": "Chaîne de Tri Automatisée",
+  "emoji": "⚙️",
+  "badge": "Industrie 4.0",
+  "tags": ["automatisme", "industrie"],
+  "summary": "⚙️ Conception et pilotage d’un système automatisé de tri de pièces cylindriques selon la hauteur, la couleur et la matière, avec supervision via IHM 🖥️.",
+  "image": "carousel.png",
+  "objective": "🎯 Automatiser et fiabiliser le processus de caractérisation et de tri de pièces industrielles tout en garantissant la sécurité, la répétabilité et la maintenabilité du système.",
+  "tech": "API Siemens S7-1500, IHM KTP700, capteurs capacitifs, inductifs et infrarouges, moteur pas-à-pas, pneumatique",
+  "links": [
+    {
+      "label": "📄 Dossier technique",
+      "url": "HAMARI-carousel.pdf",
+      "download": true
+    }
+  ]
+}
+
+    }
+  ]
+}
+
           }
         ]
       },
@@ -198,24 +208,25 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         ]
       },
-      {
-        "id": "sae-gestion-robot",
-        "title": "SAE — Gestion de projet (Robot)",
-        "emoji": "🗂️📅",
-        "badge": "SAE / Gestion",
-        "tags": ["automatisme"],
-        "summary": "Planification et organisation d'un projet robotique avec suivi des tâches 📊🤖",
-        "image": "assets/images/sae-gestion-thumb.png",
-        "objective": "Gérer un projet robotique de A à Z.",
-        "tech": "Diagramme de Gantt, gestion de tâches",
-        "links": [
-          {
-            "label": "📄 Compte rendu (PDF)",
-            "url": "CRautoSAEGUEYE-HAMARI.pdf",
-            "download": true
-          }
-        ]
-      },
+     {
+  "id": "sae-gestion-robot",
+  "title": "SAE — Robotique industrielle (KUKA KR6)",
+  "emoji": "🤖",
+  "badge": "SAE / Robotique",
+  "tags": ["robotique", "automatisme", "industrie"],
+  "summary": "🤖 Conception et programmation d’une cellule robotisée autonome assurant le tri automatisé d’écrous selon leur matière (métal / plastique), avec détection, manipulation et dépose alternée.",
+  "image": "assets/images/sae-gestion-thumb.png",
+  "objective": "🎯 Automatiser un processus de tri industriel en garantissant la sécurité, la précision des trajectoires et une cadence stable, via un robot polyarticulé programmé en langage KRL.",
+  "tech": "Robot KUKA KR6, KRL (KUKA Robot Language), WorkVisual, capteur inductif, capteur laser, aimant, mouvements PTP et LIN_REL",
+  "links": [
+    {
+      "label": "📄 Dossier technique (PDF)",
+      "url": "Dossier-kuka.pdf",
+      "download": true
+    }
+  ]
+}
+
       {
         "id": "projet-capteur",
         "title": "Projet CAPTEUR — Compte rendu",
