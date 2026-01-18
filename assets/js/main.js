@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------------------------------
    * 6) Données et Chargement des projets
    * --------------------------------- */
+   
  const PROJECTS_DATA = {
   professional: [
     {
@@ -295,17 +296,36 @@ document.addEventListener('DOMContentLoaded', () => {
       tech: "VB.NET, Visual Studio, WinForms, SQL"
     }
   ]
+personal: [
+    {
+      id: "lab-iot",
+      title: "Lab IoT — Expérimentations",
+      emoji: "🧪",
+      badge: "Projet perso",
+      tags: ["iot"],
+      summary: "Prototypes et tests autour de capteurs, communication et supervision.",
+      image: "iot.png",
+      objective: "Explorer des architectures IoT et valider des prototypes.",
+      tech: "ESP32, capteurs, MQTT, dashboards"
+    }
+  ]
 };
 
 
-  function loadProjects() {
-    const container = document.getElementById('projects-container');
-    if (!container) return;
 
-    PROJECTS_DATA.professional.forEach(project => {
-      const article = createProjectCard(project);
-      container.appendChild(article);
-    });
+  function loadProjects() {
+  const container = document.getElementById('projects-container');
+  if (!container) return;
+
+  const dataset = container.getAttribute('data-projects') || 'professional';
+  const list = PROJECTS_DATA[dataset] || [];
+
+  list.forEach(project => {
+    const article = createProjectCard(project);
+    container.appendChild(article);
+  });
+}
+
 
     // Réappliquer les animations
     if (!prefersReduced && 'IntersectionObserver' in window) {
