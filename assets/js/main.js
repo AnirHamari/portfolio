@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * 6) Données et Chargement des projets
    * --------------------------------- */
    
- const PROJECTS_DATA = {
+const PROJECTS_DATA = {
   professional: [
     {
       id: "altair-gestion",
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Conception d'un nœud de capteurs autonome pour la surveillance en temps réel.📊🔬",
       image: "iot.png",
       objective: "Mettre en œuvre un système d'acquisition de données.",
-      tech: "Capteurs,ESP32, MQTT, acquisition de données, analyse",
+      tech: "Capteurs, ESP32, MQTT, acquisition de données, analyse",
       links: [
         {
           label: "📄 Télécharger (PDF)",
@@ -295,21 +295,56 @@ document.addEventListener('DOMContentLoaded', () => {
       objective: "Développer une application de gestion complète.",
       tech: "VB.NET, Visual Studio, WinForms, SQL"
     }
-  ]
-personal: [
-    {
-      id: "lab-iot",
-      title: "Lab IoT — Expérimentations",
-      emoji: "🧪",
-      badge: "Projet perso",
-      tags: ["iot"],
-      summary: "Prototypes et tests autour de capteurs, communication et supervision.",
-      image: "iot.png",
-      objective: "Explorer des architectures IoT et valider des prototypes.",
-      tech: "ESP32, capteurs, MQTT, dashboards"
-    }
+  ],
+
+  personal: [
+    
+  {
+    id: "educateur-uscv",
+    title: "Éducateur football — US Crépy-en-Valois",
+    emoji: "⚽🧑‍🏫",
+    badge: "Engagement associatif",
+    tags: ["management"],
+    summary:
+      "Encadrement et formation de jeunes joueurs des catégories U8 et U13 au sein de l’US Crépy-en-Valois, sur une durée de deux ans.",
+    image: "football.png",
+    objective:
+      "Transmettre les bases techniques et collectives du football tout en favorisant la discipline, l’esprit d’équipe et le développement personnel des joueurs.",
+    tech:
+      "Préparation et animation des séances d’entraînement, organisation des ateliers, accompagnement des équipes lors des matchs et plateaux le week-end",
+    links: [
+      {
+        label: "🎓 Diplôme CFI U6–U9",
+        url: "#",
+        download: false
+      }
+    ]
+  },
+
+  {
+    id: "psc1",
+    title: "PSC1 — Prévention et Secours Civiques",
+    emoji: "⛑️",
+    badge: "Certification",
+    tags: ["securite"],
+    summary:
+      "Certification PSC1 obtenue en 2025, attestant de la capacité à réagir efficacement face à une situation d’urgence.",
+    image: "psc1.png",
+    objective:
+      "Savoir protéger une victime, alerter les secours et réaliser les gestes de premiers secours adaptés.",
+    tech:
+      "Gestes de premiers secours, protection et alerte, arrêt cardiaque, utilisation du DAE, mise en PLS",
+    links: [
+      {
+        label: "📜 Certificat PSC1",
+        url: "#",
+        download: false
+      }
+    ]
+  }
   ]
 };
+
 
 
 
