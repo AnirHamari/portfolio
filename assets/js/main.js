@@ -341,7 +341,29 @@ document.addEventListener('DOMContentLoaded', () => {
             download: false
           }
         ]
-      }
+      },
+         {
+  id: "karate-experience",
+  title: "Karaté & Karaté-Jujutsu — Ceinture noire (1er dan)",
+  emoji: "🥋🏆",
+  badge: "Parcours sportif",
+  tags: ["sport", "discipline", "competition"],
+  summary:
+    "Pratique du karaté depuis l’enfance au sein des clubs Bushido Karaté du Valois et l'USC Shotokan Crépy en Valois, avec une progression continue de la catégorie pupille jusqu’à senior et l’obtention de la ceinture noire (1er dan).",
+  image: "usckarate.png",
+  objective:
+    "Développer discipline, rigueur, maîtrise de soi et performance sportive à travers une pratique intensive du karaté et du karaté-jujutsu, en contexte d’entraînement et de compétition.",
+  tech:
+    "Karaté et karaté-jujutsu, préparation physique et mentale, techniques de combat, gestion du stress en compétition, respect des règles et de l’éthique sportive",
+  links: [
+    {
+      label: "🥋 Ceinture noire – 1er dan",
+      url: "#",
+      download: false
+    }
+  ]
+}
+
     ]
   };
 
