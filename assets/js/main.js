@@ -306,8 +306,8 @@ document.addEventListener('DOMContentLoaded', () => {
         badge: "Engagement associatif",
         tags: ["management"],
         summary:
-          "Encadrement et formation de jeunes joueurs des catégories U8 et U13 au sein de l’US Crépy-en-Valois, sur une durée de deux ans.",
-        image: "football.png",
+          "Encadrement et formation de jeunes joueurs des catégories U8 et U13 au sein de l’US Crépy-en-Valois(60), sur une durée de deux ans.",
+        image: "cfi.png",
         objective:
           "Transmettre les bases techniques et collectives du football tout en favorisant la discipline, l’esprit d’équipe et le développement personnel des joueurs.",
         tech:
