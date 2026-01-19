@@ -131,141 +131,216 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------------------------------
    * 6) Données et Chargement des projets
    * --------------------------------- */
+
   const PROJECTS_DATA = {
-    "professional": [
+    professional: [
       {
-        "id": "altair-gestion",
-        "title": "Plateforme de Gestion Scolaire",
-        "emoji": "🧩",
-        "badge": "Stage Altair",
-        "tags": ["web"],
-        "summary": "Refonte complète d'une application de suivi parents-élèves (Django/React). Migration d'architecture legacy vers moderne.",
-        "image": "altair.png",
-        "objective": "Moderniser et sécuriser l'accès aux données scolaires.",
-        "tech": "Django REST, React.js, PostgreSQL ...",
-        "links": [
+        id: "altair-gestion",
+        title: "Plateforme de Gestion Scolaire",
+        emoji: "🧩",
+        badge: "Stage Altair",
+        tags: ["web"],
+        summary:
+          "Refonte complète d'une application de suivi parents-élèves (Django/React). Migration d'architecture legacy vers moderne.",
+        image: "altair.png",
+        objective: "Moderniser et sécuriser l'accès aux données scolaires.",
+        tech: "Django REST, React.js, PostgreSQL ...",
+        links: [
           {
-            "label": "📄 Rapport (PDF)",
-            "url": "rpt.pdf",
-            "download": true
+            label: "📄 Rapport (PDF)",
+            url: "rpt.pdf",
+            download: true
           }
         ]
       },
+
       {
-        "id": "access-control",
-        "title": "Automatisation de porte de garage.",
-        "emoji": "🚪",
-        "badge": "Automatisme",
-        "tags": ["automatisme"],
-        "summary": "Système automatisé de gestion d'ouverture sécurisée en milieu industriel.",
-        "image": "porte.png",
-        "objective": "Sécuriser les accès industriels via PLC.",
-        "tech": "Porte logiqueTIA Portal (Siemens), Unity Pro (Schneider)"
-      },
-      {
-        "id": "tri-carrousel",
-        "title": "Chaîne de Tri Automatisée",
-        "emoji": "⚙️",
-        "badge": "Industrie 4.0",
-        "tags": ["automatisme"],
-        "summary": "Pilotage d'un système de tri de pièces par matière et couleur avec IHM.",
-        "image": "assets/images/projects/carrousel.jpg",
-        "objective": "Optimisation des processus de tri.",
-        "tech": "API Siemens, IHM KTP700",
-        "links": [
+        id: "access-control",
+        title: "Automatisation de porte de garage",
+        emoji: "🚪",
+        badge: "Automatisme",
+        tags: ["automatisme"],
+        summary:
+          "🚪 Conception d’un système automatisé de commande d’ouverture et de fermeture d’une porte de garage, intégrant des logiques de sécurité et de contrôle.",
+        image: "porte.png",
+        objective:
+          "🎯 Mettre en œuvre une automatisation fiable d’une porte de garage en assurant un fonctionnement sécurisé et cohérent avec les scénarios d’usage.",
+        tech:
+          "TIA Portal (Siemens), Unity Pro (Schneider), logique câblée et automatisée",
+        links: [
           {
-            "label": "📄 Dossier Tech",
-            "url": "hamari_Technique_Carrousel.pdf",
-            "download": true
+            label: "📄 Dossier technique",
+            url: "CRautoSAEGUEYE-HAMARI.pdf",
+            download: true
           }
         ]
       },
+
       {
-        "id": "ai-ethics",
-        "title": "Les enjeux de l'Intelligence Artificielle",
-        "emoji": "🤖⚖️",
-        "badge": "Rapport académique",
-        "tags": ["web"],
-        "summary": "Synthèse des enjeux éthiques de l'IA : biais algorithmiques, impacts sociétaux et régulation 🧠⚖️",
-        "image": "assets/images/ai-ethics-thumb.png",
-        "objective": "Analyser les défis éthiques et réglementaires de l'IA.",
-        "tech": "Recherche documentaire, analyse critique",
-        "links": [
+        id: "tri-carrousel",
+        title: "Chaîne de Tri Automatisée",
+        emoji: "⚙️",
+        badge: "Industrie 4.0",
+        tags: ["automatisme", "industrie"],
+        summary:
+          "⚙️ Conception et pilotage d’un système automatisé de tri de pièces cylindriques selon la hauteur, la couleur et la matière, avec supervision via IHM 🖥️.",
+        image: "carousel.png",
+        objective:
+          "🎯 Automatiser et fiabiliser le processus de caractérisation et de tri de pièces industrielles tout en garantissant la sécurité, la répétabilité et la maintenabilité du système.",
+        tech:
+          "API Siemens S7-1500, IHM KTP700, capteurs capacitifs, inductifs et infrarouges, moteur pas-à-pas, pneumatique",
+        links: [
           {
-            "label": "📄 Télécharger (PDF)",
-            "url": "lesenjeuxd'artificielle.pdf",
-            "download": true
+            label: "📄 Dossier technique",
+            url: "HAMARI-carousel.pdf",
+            download: true
           }
         ]
       },
+
       {
-        "id": "sae-gestion-robot",
-        "title": "SAE — Gestion de projet (Robot)",
-        "emoji": "🗂️📅",
-        "badge": "SAE / Gestion",
-        "tags": ["automatisme"],
-        "summary": "Planification et organisation d'un projet robotique avec suivi des tâches 📊🤖",
-        "image": "assets/images/sae-gestion-thumb.png",
-        "objective": "Gérer un projet robotique de A à Z.",
-        "tech": "Diagramme de Gantt, gestion de tâches",
-        "links": [
+        id: "ai-ethics",
+        title: "Les enjeux de l'Intelligence Artificielle",
+        emoji: "🤖⚖️",
+        badge: "Rapport académique",
+        tags: ["web"],
+        summary:
+          "Synthèse des enjeux éthiques de l'IA : biais algorithmiques, impacts sociétaux et régulation 🧠⚖️",
+        image: "assets/images/ai-ethics-thumb.png",
+        objective: "Analyser les défis éthiques et réglementaires de l'IA.",
+        tech: "Recherche documentaire, analyse critique",
+        links: [
           {
-            "label": "📄 Compte rendu (PDF)",
-            "url": "CRautoSAEGUEYE-HAMARI.pdf",
-            "download": true
+            label: "📄 Télécharger (PDF)",
+            url: "lesenjeuxd'artificielle.pdf",
+            download: true
           }
         ]
       },
+
       {
-        "id": "projet-capteur",
-        "title": "Projet CAPTEUR — Compte rendu",
-        "emoji": "📡📈🌡️",
-        "badge": "Système embarqué",
-        "tags": ["iot"],
-        "summary": "Conception d'un nœud de capteurs autonome pour la surveillance en temps réel.📊🔬",
-        "image": "capteur.png",
-        "objective": "Mettre en œuvre un système d'acquisition de données.",
-        "tech": "Capteurs,ESP32, MQTT, acquisition de données, analyse",
-        "links": [
+        id: "sae-gestion-robot",
+        title: "SAE — Robotique industrielle (KUKA KR6)",
+        emoji: "🤖",
+        badge: "SAE / Robotique",
+        tags: ["robotique", "automatisme", "industrie"],
+        summary:
+          "🤖 Conception et programmation d’une cellule robotisée autonome assurant le tri automatisé d’écrous selon leur matière (métal / plastique), avec détection, manipulation et dépose alternée.",
+        image: "kuka.png",
+        objective:
+          "🎯 Automatiser un processus de tri industriel en garantissant la sécurité, la précision des trajectoires et une cadence stable, via un robot polyarticulé programmé en langage KRL.",
+        tech:
+          "Robot KUKA KR6, KRL (KUKA Robot Language), WorkVisual, capteur inductif, capteur laser, aimant, mouvements PTP et LIN_REL",
+        links: [
           {
-            "label": "📄 Télécharger (PDF)",
-            "url": "capteur.jpg",
-            "download": true
+            label: "📄 Dossier technique (PDF)",
+            url: "Dossier-kuka.pdf",
+            download: true
           }
         ]
       },
+
       {
-        "id": "tp-matlab",
-        "title": "TP MATLAB — FFT & intégration numérique",
-        "emoji": "📊🧮",
-        "badge": "Outils Mathématiques",
-        "tags": ["web"],
-        "summary": "Génération de signaux, transformée de Fourier, intégration numérique 📈✨",
-        "image": "matlab-project.png",
-        "objective": "Maîtriser le traitement du signal numérique.",
-        "tech": "MATLAB, FFT, intégration/dérivation numérique"
+        id: "projet-capteur",
+        title: "Projet CAPTEUR — Compte rendu",
+        emoji: "📡📈🌡️",
+        badge: "Système embarqué",
+        tags: ["iot"],
+        summary:
+          "Conception d'un nœud de capteurs autonome pour la surveillance en temps réel.📊🔬",
+        image: "iot.png",
+        objective: "Mettre en œuvre un système d'acquisition de données.",
+        tech: "Capteurs, ESP32, MQTT, acquisition de données, analyse",
+        links: [
+          {
+            label: "📄 Télécharger (PDF)",
+            url: "iot.jpg",
+            download: true
+          }
+        ]
       },
+
       {
-        "id": "projet-reseaux",
-        "title": "Projet Réseaux — Diagnostic & connectivité",
-        "emoji": "🌐🧰",
-        "badge": "Réseau",
-        "tags": ["iot"],
-        "summary": "Tests de connectivité réseau et diagnostic avec commandes système 🔌📡",
-        "image": "reseaux.png",
-        "objective": "Diagnostiquer et résoudre des problèmes réseau.",
-        "tech": "Ping, commandes réseau, diagnostic"
+        id: "tp-matlab",
+        title: "TP MATLAB — FFT & intégration numérique",
+        emoji: "📊🧮",
+        badge: "Outils Mathématiques",
+        tags: ["web"],
+        summary: "Génération de signaux, transformée de Fourier, intégration numérique 📈✨",
+        image: "matlab-project.png",
+        objective: "Maîtriser le traitement du signal numérique.",
+        tech: "MATLAB, FFT, intégration/dérivation numérique"
       },
+
       {
-        "id": "app-vbnet",
-        "title": "Application de gestion scolaire — VB",
-        "emoji": "🧑🏫🗃️",
-        "badge": "Projet applicatif",
-        "tags": ["web"],
-        "summary": "Gestion scolaire avec authentification multi-rôles et gestion des notes 📚👨‍🎓",
-        "image": "vbnet-project.png",
-        "objective": "Développer une application de gestion complète.",
-        "tech": "VB.NET, Visual Studio, WinForms, SQL"
+        id: "projet-reseaux",
+        title: "Projet Réseaux — Diagnostic & connectivité",
+        emoji: "🌐🧰",
+        badge: "Réseau",
+        tags: ["iot"],
+        summary: "Tests de connectivité réseau et diagnostic avec commandes système 🔌📡",
+        image: "reseaux.png",
+        objective: "Diagnostiquer et résoudre des problèmes réseau.",
+        tech: "Ping, commandes réseau, diagnostic"
+      },
+
+      {
+        id: "app-vbnet",
+        title: "Application de gestion scolaire — VB",
+        emoji: "🧑🏫🗃️",
+        badge: "Projet applicatif",
+        tags: ["web"],
+        summary: "Gestion scolaire avec authentification multi-rôles et gestion des notes 📚👨🎓",
+        image: "vbnet-project.png",
+        objective: "Développer une application de gestion complète.",
+        tech: "VB.NET, Visual Studio, WinForms, SQL"
+      }
+    ],
+
+    personal: [
+
+      {
+        id: "educateur-uscv",
+        title: "Éducateur football — US Crépy-en-Valois",
+        emoji: "⚽🧑🏫",
+        badge: "Engagement associatif",
+        tags: ["management"],
+        summary:
+          "Encadrement et formation de jeunes joueurs des catégories U8 et U13 au sein de l’US Crépy-en-Valois, sur une durée de deux ans.",
+        image: "football.png",
+        objective:
+          "Transmettre les bases techniques et collectives du football tout en favorisant la discipline, l’esprit d’équipe et le développement personnel des joueurs.",
+        tech:
+          "Préparation et animation des séances d’entraînement, organisation des ateliers, accompagnement des équipes lors des matchs et plateaux le week-end",
+        links: [
+          {
+            label: "🎓 Diplôme CFI U6–U9",
+            url: "#",
+            download: false
+          }
+        ]
+      },
+
+      {
+        id: "psc1",
+        title: "PSC1 — Prévention et Secours Civiques",
+        emoji: "⛑️",
+        badge: "Certification",
+        tags: ["securite"],
+        summary:
+          "Certification PSC1 obtenue en 2025, attestant de la capacité à réagir efficacement face à une situation d’urgence.",
+        image: "psc1.png",
+        objective:
+          "Savoir protéger une victime, alerter les secours et réaliser les gestes de premiers secours adaptés.",
+        tech:
+          "Gestes de premiers secours, protection et alerte, arrêt cardiaque, utilisation du DAE, mise en PLS",
+        links: [
+          {
+            label: "📜 Certificat PSC1",
+            url: "#",
+            download: false
+          }
+        ]
       }
     ]
   };
@@ -274,7 +349,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('projects-container');
     if (!container) return;
 
-    PROJECTS_DATA.professional.forEach(project => {
+    const dataset = container.getAttribute('data-projects') || 'professional';
+    const list = PROJECTS_DATA[dataset] || [];
+
+    list.forEach(project => {
       const article = createProjectCard(project);
       container.appendChild(article);
     });
