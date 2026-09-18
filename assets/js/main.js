@@ -230,14 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
         objective:
           "🎯 Automatiser un processus de tri industriel en garantissant la sécurité, la précision des trajectoires et une cadence stable, via un robot polyarticulé programmé en langage KRL.",
         tech:
-          "Robot KUKA KR6, KRL (KUKA Robot Language), WorkVisual, capteur inductif, capteur laser, aimant, mouvements PTP et LIN_REL",
-        links: [
-          {
-            label: "📄 Dossier technique (PDF)",
-            url: "Dossier-kuka.pdf",
-            download: true
-          }
-        ]
+          "Robot KUKA KR6, KRL (KUKA Robot Language), WorkVisual, capteur inductif, capteur laser, aimant, mouvements PTP et LIN_REL"
       },
 
       {
@@ -253,8 +246,8 @@ document.addEventListener('DOMContentLoaded', () => {
         tech: "Capteurs, ESP32, MQTT, acquisition de données, analyse",
         links: [
           {
-            label: "📄 Télécharger (PDF)",
-            url: "iot.jpg",
+            label: "📄 Compte rendu (PDF)",
+            url: "Compte%20Rendu%20du%20Projet%20CAPTEUR.pdf",
             download: true
           }
         ]
