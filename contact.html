@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
-  <meta name="description" content="Contactez Hamari Anir pour toute opportunité professionnelle.">
+  <meta name="description" content="Contactez Hamari Anir, étudiant en Master Informatique SIGLIS (UPPA) en recherche d'alternance dès septembre 2026.">
 
-  <!-- Styles EXCLUSIFS à la page Contact (Cinématique & Équilibré) -->
+  <!-- Styles EXCLUSIFS à la page Contact -->
   <style>
     :root {
       --contact-bg: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
@@ -25,8 +25,9 @@
       overflow-x: hidden;
     }
 
+    /* ---------- Hero ---------- */
     .contact-hero {
-      padding: 100px 0 60px;
+      padding: 90px 20px 30px;
       text-align: center;
       opacity: 0;
       transform: translateY(30px);
@@ -43,37 +44,79 @@
       font-weight: 900;
       background: linear-gradient(to right, #fff, var(--contact-accent));
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    /* Dashboard de Connectivité Cinématique */
+    .contact-intro {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 1.08rem;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ---------- Bandeau disponibilité ---------- */
+    .availability-banner {
+      margin: 32px auto 0;
+      max-width: 820px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px 20px;
+      padding: 16px 24px;
+      border: 1px solid var(--contact-border);
+      border-radius: 18px;
+      background: rgba(76, 201, 240, 0.06);
+      backdrop-filter: blur(10px);
+    }
+
+    .ab-item {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.88);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .ab-sep {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--contact-accent);
+      opacity: 0.55;
+    }
+
+    /* ---------- Grille de cartes ---------- */
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 290px));
+      justify-content: center;
+      gap: 26px;
       padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto 100px;
+      max-width: 1000px;
+      margin: 44px auto 100px;
     }
 
     .c-card {
       background: var(--contact-card);
       backdrop-filter: blur(15px);
       border: 1px solid var(--contact-border);
-      border-radius: 24px;
-      padding: 40px;
+      border-radius: 22px;
+      padding: 34px 28px;
       color: white;
       text-decoration: none;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      min-height: 250px;
       opacity: 0;
-      transform: scale(0.9);
+      transform: scale(0.92);
     }
 
     .c-card.visible {
@@ -82,7 +125,7 @@
     }
 
     .c-card:hover {
-      transform: translateY(-15px) scale(1.02);
+      transform: translateY(-12px) scale(1.02);
       border-color: var(--contact-accent);
       background: rgba(255, 255, 255, 0.05);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(76, 201, 240, 0.2);
@@ -95,8 +138,9 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
       transition: 0.5s;
+      pointer-events: none;
     }
 
     .c-card:hover::after {
@@ -104,34 +148,40 @@
     }
 
     .c-icon {
-      font-size: 3.5rem;
-      margin-bottom: 25px;
+      font-size: 3rem;
+      margin-bottom: 18px;
       filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
     }
 
     .c-label {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 2px;
       color: var(--contact-accent);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       font-weight: 700;
     }
 
     .c-value {
-      font-size: 1.3rem;
+      font-size: 1.15rem;
       font-weight: 500;
-      word-break: break-all;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .c-action {
-      margin-top: 30px;
-      padding: 12px 25px;
+      margin-top: 22px;
+      padding: 11px 24px;
       border-radius: 50px;
       background: rgba(255, 255, 255, 0.1);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
-      transition: background 0.3s;
+      transition: background 0.3s, color 0.3s;
+      white-space: nowrap;
     }
 
     .c-card:hover .c-action {
@@ -139,12 +189,18 @@
       color: #000;
     }
 
-    /* Copyright épuré */
+    /* ---------- Footer ---------- */
     .contact-footer {
       text-align: center;
       padding: 40px;
       color: rgba(255, 255, 255, 0.4);
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .contact-hero { padding: 70px 18px 20px; }
+      .availability-banner { gap: 8px 14px; padding: 14px 18px; }
+      .ab-item { font-size: 0.88rem; white-space: normal; }
     }
   </style>
 </head>
@@ -165,61 +221,70 @@
     <section class="contact-hero" id="reveal-hero">
       <div class="container">
         <h1 class="contact-title">Parlons <span style="color: var(--contact-accent);">Futur.</span></h1>
-        <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
-          Actuellement en Master Informatique SIGLIS à l'UPPA (Anglet), je recherche une alternance de 2 ans dès septembre 2026 (rythme 2 semaines entreprise / 2 semaines cours), sur plusieurs domaines : développement, systèmes embarqués & IoT, informatique industrielle, réseaux IT-OT et gestion de projet. Une idée, un projet ou une opportunité ? Connectons-nous.
+        <p class="contact-intro">
+          Étudiant en Master Informatique SIGLIS à l'UPPA (Anglet), je recherche l'entreprise qui m'accompagnera
+          en alternance sur les deux ans de mon master. Polyvalent, du développement aux systèmes embarqués en
+          passant par les réseaux, je suis ouvert à tout projet où je peux apprendre et être utile.
+          Un poste, une piste ou une simple question ? Écrivez-moi.
         </p>
+
+        <div class="availability-banner">
+          <span class="ab-item">🎯 Alternance 2 ans</span>
+          <span class="ab-sep"></span>
+          <span class="ab-item">📅 Dès septembre 2026</span>
+          <span class="ab-sep"></span>
+          <span class="ab-item">🔁 2 sem. entreprise / 2 sem. cours</span>
+          <span class="ab-sep"></span>
+          <span class="ab-item">🇫🇷 Bassin parisien &amp; Pays Basque</span>
+        </div>
       </div>
     </section>
 
-    <div class="contact-grid">
-      <!-- LinkedIn (LINK UPDATED) -->
-      <a href="https://www.linkedin.com/in/anir-hamari/" target="_blank" rel="noopener" class="c-card reveal-item">
-        <div class="c-icon">🔗</div>
-        <div class="c-label">Réseau</div>
-        <div class="c-value">LinkedIn</div>
-        <div class="c-action">Ouvrir le profil ➔</div>
-      </a>
+    <section class="container">
+      <div class="contact-grid">
 
-      <!-- GitHub -->
-      <a href="https://github.com/AnirHamari" target="_blank" rel="noopener" class="c-card reveal-item">
-        <div class="c-icon">💻</div>
-        <div class="c-label">Code & projets</div>
-        <div class="c-value">GitHub</div>
-        <div class="c-action">Voir mon code ➔</div>
-      </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/anir-hamari/" target="_blank" rel="noopener" class="c-card reveal-item">
+          <div class="c-icon">🔗</div>
+          <div class="c-label">Réseau</div>
+          <div class="c-value">LinkedIn</div>
+          <div class="c-action">Ouvrir le profil ➔</div>
+        </a>
 
-      <!-- Direct Email -->
-      <a href="mailto:anir.hamari23@gmail.com" class="c-card reveal-item">
-        <div class="c-icon">📧</div>
-        <div class="c-label">Message Direct</div>
-        <div class="c-value">anir.hamari23@gmail.com</div>
-        <div class="c-action">Envoyer un mail ➔</div>
-      </a>
+        <!-- GitHub -->
+        <a href="https://github.com/AnirHamari" target="_blank" rel="noopener" class="c-card reveal-item">
+          <div class="c-icon">💻</div>
+          <div class="c-label">Projets & code</div>
+          <div class="c-value">GitHub</div>
+          <div class="c-action">Voir mon code ➔</div>
+        </a>
 
-      <!-- Phone -->
-      <div class="c-card reveal-item">
-        <div class="c-icon">📱</div>
-        <div class="c-label">Téléphone</div>
-        <div class="c-value">06 46 38 27 04</div>
-        <a href="tel:0646382704" class="c-action">Appeler maintenant ➔</a>
+        <!-- Email -->
+        <a href="mailto:anir.hamari23@gmail.com" class="c-card reveal-item">
+          <div class="c-icon">📧</div>
+          <div class="c-label">Message direct</div>
+          <div class="c-value" style="font-size: 0.95rem;">anir.hamari23@gmail.com</div>
+          <div class="c-action">Envoyer un mail ➔</div>
+        </a>
+
+        <!-- Téléphone -->
+        <a href="tel:0646382704" class="c-card reveal-item">
+          <div class="c-icon">📱</div>
+          <div class="c-label">Téléphone</div>
+          <div class="c-value">06 46 38 27 04</div>
+          <div class="c-action">Appeler maintenant ➔</div>
+        </a>
+
+        <!-- CV -->
+        <a href="cvanir.pdf" target="_blank" rel="noopener" download class="c-card reveal-item">
+          <div class="c-icon">📄</div>
+          <div class="c-label">Curriculum</div>
+          <div class="c-value">Mon CV</div>
+          <div class="c-action">Télécharger (PDF) ➔</div>
+        </a>
+
       </div>
-
-      <!-- CV -->
-      <a href="cvanir.pdf" target="_blank" rel="noopener" download class="c-card reveal-item">
-        <div class="c-icon">📄</div>
-        <div class="c-label">Curriculum</div>
-        <div class="c-value">Mon CV</div>
-        <div class="c-action">Télécharger (PDF) ➔</div>
-      </a>
-
-      <!-- Location & mobilité -->
-      <div class="c-card reveal-item">
-        <div class="c-icon">📍</div>
-        <div class="c-label">Localisation & mobilité</div>
-        <div class="c-value">Bassin parisien (Crépy-en-Valois) & Pays Basque (Bayonne / Anglet)</div>
-        <div class="c-action" style="background: rgba(76, 201, 240, 0.1); color: var(--contact-accent);">Alternance dès sept. 2026</div>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer class="contact-footer">
@@ -232,18 +297,16 @@
       const hero = document.getElementById('reveal-hero');
       const items = document.querySelectorAll('.reveal-item');
 
-      // Effet cinématique au chargement
       setTimeout(() => {
         hero.classList.add('visible');
       }, 200);
 
-      // Intersection Observer pour les cartes
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
               entry.target.classList.add('visible');
-            }, index * 150);
+            }, index * 120);
             observer.unobserve(entry.target);
           }
         });
@@ -253,7 +316,6 @@
     });
   </script>
 
-  <!-- Main JS fallback if needed -->
   <script src="assets/js/main.js" defer></script>
 </body>
 
